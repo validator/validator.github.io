@@ -2,5 +2,5 @@ HTML2MARKDOWN=html2text
 
 all: README.md
 
-README.md: README.html
+README.md: index.html
 	$(HTML2MARKDOWN) $(HTML2MARKDOWNFLAGS) $< > $@

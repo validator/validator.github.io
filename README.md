@@ -1,8 +1,5 @@
 The [validator.nu][1] and [validator.w3.org/nu][2] services are built from code
-hosted in a number of repos at [bitbucket.org/validator/][3]. Here at github,
-there are read-only mirrors of those repos, as well as some [related HTML5 and
-XHTML5 schemas][4], some [jar files][5], and a [validation how-to][6] that
-explains various ways to do validation of HTML5 and XHTML5 documents.
+hosted at [bitbucket.org/validator][3].
 
    [1]: http://validator.nu/
 
@@ -10,9 +7,21 @@ explains various ways to do validation of HTML5 and XHTML5 documents.
 
    [3]: https://bitbucket.org/validator/
 
-   [4]: schemas
+Here at [github.com/validator][4], there are read-only mirrors of those
+bitbucket sources, as well as:
 
-   [5]: jars
+   [4]: https://github.com/validator/
 
-   [6]: how-to
+  * some [related HTML5 and XHTML5 schemas][5]
+
+  * some [jar files][6]
+
+  * a [validation how-to][7] that explains various ways to do validation of
+HTML5 and XHTML5 documents
+
+   [5]: schemas
+
+   [6]: jars
+
+   [7]: how-to
 

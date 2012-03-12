@@ -19,9 +19,9 @@ bitbucket sources, as well as:
   * a [validation how-to][7] that explains various ways to do validation of
 HTML5 and XHTML5 documents
 
-   [5]: schemas
+   [5]: https://validator.github.com/schemas
 
-   [6]: jars
+   [6]: https://validator.github.com/jars
 
-   [7]: how-to
+   [7]: https://validator.github.com/how-to.html
 

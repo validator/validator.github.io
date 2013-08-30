@@ -15,7 +15,7 @@ You can use the `vnu.jar` validator as an executable for command-line validation
 of HTML documents by invoking it like this:
 
       java -jar vnu.jar [--html] [--entities] [--schema URL]
-	  [--format gnu|xml|json|text] [--verbose] [--version] FILES
+          [--format gnu|xml|json|text] [--verbose] [--version] FILES
 
 To validate one or more documents from the command line:
 
@@ -117,7 +117,7 @@ error-level ones by setting the value of the `nu.validator.client.level` system
 property to `error`, like this:
 
        java -Dnu.validator.client.level=error\
-	   -cp vnu.jar nu.validator.client.HttpClient FILE.html...
+           -cp vnu.jar nu.validator.client.HttpClient FILE.html...
 
 Most of the properties listed below map to the validator.nu common input
 parameters documented at

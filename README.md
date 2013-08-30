@@ -37,13 +37,19 @@ executable provides the following options:
 #### --entities
 
     Specifies that the XML parser must not load remote/external entities (such
-    as DTDs) from the Internet.  default: [unset; the XML parser will attempt to
-    load external entities]
+    as DTDs) from the Internet.
+
+    default: [unset; the XML parser will attempt to load external entities]
 
 #### --format format
 
-    Specifies the output format for validation results.  default: "gnu" possible
-    values: "gnu", "xml", "json", "text" see also:
+    Specifies the output format for validation results.
+
+    default: "gnu"
+
+    possible values: "gnu", "xml", "json", "text"
+
+    see also:
     [http://wiki.whatwg.org/wiki/Validator.nu_Common_Input_Parameters#out][4]
 
    [4]: http://wiki.whatwg.org/wiki/Validator.nu_Common_Input_Parameters#out
@@ -51,18 +57,22 @@ executable provides the following options:
 #### --html
 
     Specifies that all documents must be parsed by the HTML parser as text/html
-    (otherwise, *.xhtml documents are parsed by the XML parser).  default:
-    [unset; *.xhtml documents are parsed by the XML parser]
+    (otherwise, *.xhtml documents are parsed by the XML parser).
+
+    default: [unset; *.xhtml documents are parsed by the XML parser]
 
 #### --schema URL
 
     Specifies a URL for a known http://s.validator.nu/* schema to use for
-    document validation.  default: http://s.validator.nu/html5-all.rnc
+    document validation.
+
+    default: http://s.validator.nu/html5-all.rnc
 
 #### --verbose
 
     Specifies that the validator output should be "verbose". Currently this just
     means that the names of files being validated are written to stdout.
+
     default: [unset; output is not verbose]
 
 #### --version
@@ -128,41 +138,58 @@ parameters documented at
 #### nu.validator.client.host
 
     Specifies the hostname of the validator for the client to connect to.
+
     default: "127.0.0.1"
 
 #### nu.validator.client.port
 
     Specifies the hostname of the validator for the client to connect to.
-    default: "8888" example: java -Dnu.validator.client.port=8080 -jar vnu.jar
-    FILE.html
+
+    default: "8888"
+
+    example: java -Dnu.validator.client.port=8080 -jar vnu.jar FILE.html
 
 #### nu.validator.client.level
 
     Specifies the severity level of validation messages to report; to suppress
     warning-level messages, and only show error-level ones, set this property to
-    "error".  default: [unset] possible values: "error" example: java
-    -Dnu.validator.client.level=error -jar vnu.jar FILE.html
+    "error".
+
+    default: [unset]
+
+    possible values: "error"
+
+    example: java -Dnu.validator.client.level=error -jar vnu.jar FILE.html
 
 #### nu.validator.client.parser
 
-    Specifies which parser to use.  default: "html"; or, for *.xhtml input
-    files, "xml" possible values: see
+    Specifies which parser to use.
+
+    default: "html"; or, for *.xhtml input files, "xml"
+
+    possible values: see
     [http://wiki.whatwg.org/wiki/Validator.nu_Common_Input_Parameters#parser][10]
 
    [10]: http://wiki.whatwg.org/wiki/Validator.nu_Common_Input_Parameters#parser
 
 #### nu.validator.client.charset
 
-    Specifies the encoding of the input document.  default: [unset]
+    Specifies the encoding of the input document.
+
+    default: [unset]
 
 #### nu.validator.client.content-type
 
-    Specifies the content-type of the input document.  default: "text/html"; or,
-    for *.xhtml files, "application/xhtml+xml"
+    Specifies the content-type of the input document.
+
+    default: "text/html"; or, for *.xhtml files, "application/xhtml+xml"
 
 #### nu.validator.client.out
 
-    Specifies the output format for validation messages.  default: "gnu"
+    Specifies the output format for validation messages.
+
+    default: "gnu"
+
     possible values: see
     [http://wiki.whatwg.org/wiki/Validator.nu_Common_Input_Parameters#out][11]
 
@@ -171,8 +198,11 @@ parameters documented at
 #### nu.validator.client.asciiquotes
 
     Specifies whether ASCII quotation marks are substituted for Unicode smart
-    quotation marks in validation messages.  default: "yes" possible values:
-    "yes" or "no"
+    quotation marks in validation messages.
+
+    default: "yes"
+
+    possible values: "yes" or "no"
 
 For more information... sources bugz etc.
 

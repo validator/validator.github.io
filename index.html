@@ -62,14 +62,18 @@ Web-based:
 <pre>
 Specifies that the XML parser must not load remote/external entities (such
 as DTDs) from the Internet.
+
 default: [unset; the XML parser will attempt to load external entities]
 </pre>
 
 <h4 id="format">--format <var>format</var></h4>
 <pre>
 Specifies the output format for validation results.
+
 default: <span class=option-value>"gnu"</span>
+
 possible values: <span class=option-value>"gnu"</span>, <span class=option-value>"xml"</span>, <span class=option-value>"json"</span>, <span class=option-value>"text"</span>
+
 see also: <a href="http://wiki.whatwg.org/wiki/Validator.nu_Common_Input_Parameters#out">http://wiki.whatwg.org/wiki/Validator.nu_Common_Input_Parameters#out</a>
 </pre>
 
@@ -77,6 +81,7 @@ see also: <a href="http://wiki.whatwg.org/wiki/Validator.nu_Common_Input_Paramet
 <pre>
 Specifies that all documents must be parsed by the HTML parser as text/html
 (otherwise, *.xhtml documents are parsed by the XML parser).
+
 default: [unset; *.xhtml documents are parsed by the XML parser]
 </pre>
 
@@ -84,6 +89,7 @@ default: [unset; *.xhtml documents are parsed by the XML parser]
 <pre>
 Specifies a URL for a known http://s.validator.nu/* schema to use for
 document validation.
+
 default: <span class=option-value>http://s.validator.nu/html5-all.rnc</span>
 </pre>
 
@@ -91,6 +97,7 @@ default: <span class=option-value>http://s.validator.nu/html5-all.rnc</span>
 <pre>
 Specifies that the validator output should be "verbose". Currently this
 just means that the names of files being validated are written to stdout.
+
 default: [unset; output is not verbose]
 </pre>
 
@@ -173,6 +180,7 @@ Shows validator version number.
 <h4 id="nuvalidatorclienthost">nu.validator.client.host</h4>
 <pre>
 Specifies the hostname of the validator for the client to connect to.
+
 default: <span class=option-value>"127.0.0.1"</span>
 </pre>
 
@@ -180,50 +188,69 @@ default: <span class=option-value>"127.0.0.1"</span>
 <h4 id="nuvalidatorclientport">nu.validator.client.port</h4>
 <pre>
 Specifies the hostname of the validator for the client to connect to.
+
 default: <span class=option-value>"8888"</span>
+
 example: java -Dnu.validator.client.port=8080 -jar vnu.jar FILE.html
 </pre>
 
 
 <h4 id="nuvalidatorclientlevel">nu.validator.client.level</h4>
-<pre>Specifies the severity level of validation messages to report; to
+<pre>
+Specifies the severity level of validation messages to report; to
 suppress warning-level messages, and only show error-level ones, set
 this property to "error".
+
 default: [unset]
+
 possible values: <span class=option-value>"error"</span>
+
 example: java -Dnu.validator.client.level=error -jar vnu.jar FILE.html
 </pre>
 
 
 <h4 id="nuvalidatorclientparser">nu.validator.client.parser</h4>
-<pre>Specifies which parser to use.
+<pre>
+Specifies which parser to use.
+
 default: <span class=option-value>"html"</span>; or, for *.xhtml input files, <span class=option-value>"xml"</span>
+
 possible values: see <a href="http://wiki.whatwg.org/wiki/Validator.nu_Common_Input_Parameters#parser">http://wiki.whatwg.org/wiki/Validator.nu_Common_Input_Parameters#parser</a>
 </pre>
 
 
 <h4 id="nuvalidatorclientcharset">nu.validator.client.charset</h4>
-<pre>Specifies the encoding of the input document.
+<pre>
+Specifies the encoding of the input document.
+
 default: [unset]
 </pre>
 
 
 <h4 id="nuvalidatorclientcontent-type">nu.validator.client.content-type</h4>
-<pre>Specifies the content-type of the input document.
+<pre>
+Specifies the content-type of the input document.
+
 default: <span class=option-value>"text/html"</span>; or, for *.xhtml files, <span class=option-value>"application/xhtml+xml"</span>
 </pre>
 
 
 <h4 id="nuvalidatorclientout">nu.validator.client.out</h4>
-<pre>Specifies the output format for validation messages.
+<pre>
+Specifies the output format for validation messages.
+
 default: "gnu"
+
 possible values: see <a href="http://wiki.whatwg.org/wiki/Validator.nu_Common_Input_Parameters#out">http://wiki.whatwg.org/wiki/Validator.nu_Common_Input_Parameters#out</a>
 </pre>
 
 <h4 id="nuvalidatorclientasciiquotes">nu.validator.client.asciiquotes</h4>
-<pre>Specifies whether ASCII quotation marks are substituted for Unicode
+<pre>
+Specifies whether ASCII quotation marks are substituted for Unicode
 smart quotation marks in validation messages.
+
 default: "yes"
+
 possible values: "yes" or "no"
 </pre>
 
@@ -314,9 +341,10 @@ pre {
   background-color: #F8F8F8;
   border: 1px solid #ccc;
   border-radius: 3px;
-  padding: 2px 6px;
+  padding: 10px;
   margin-right: 15%;
   margin-top: 6px;
+  line-height: 1.2
 }
 .java-class, .java-property, .option-value {
   background-color: yellow;

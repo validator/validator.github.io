@@ -11,8 +11,6 @@ documents.
 
    [3]: https://github.com/validator/validator.github.io/
 
-Command-line: usage · options | Web-based: usage · client · options
-
 ## Command-line usage
 
 You can use the `vnu.jar` validator as an executable for command-line validation

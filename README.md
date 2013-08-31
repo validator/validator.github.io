@@ -1,33 +1,36 @@
 # How to use the vnu.jar validator
 
-The `vnu.jar` validator is a packaged standalone version of the
-[validator.nu][1] code. The [latest version][2] is available from the [validator
-area at github][3]. The following are instructions on how to use it to validate
-documents.
+The `vnu.jar` application is a portable standalone version of the
+[validator.nu][1] validator. The [latest version][2] is available from the
+[validator area at github][3]. The following are instructions on how to use it
+to validate documents.
 
    [1]: http://about.validator.nu/
    [2]: https://github.com/validator/validator.github.io/releases
    [3]: https://github.com/validator/validator.github.io/
+
+**Note:** In the instructions, replace _"~/vnu.jar"_ with the actual path to the
+`vnu.jar` file on your system.
 
 ## Command-line usage
 
 You can use the `vnu.jar` validator as an executable for command-line validation
 of HTML documents by invoking it like this:
 
-      java -jar vnu.jar [--html] [--entities] [--schema URL]
+      java -jar ~/vnu.jar [--help] [--html] [--entities] [--schema URL]
           [--format gnu|xml|json|text] [--verbose] [--version] FILES
 
 To validate one or more documents from the command line:
 
-      java -jar vnu.jar FILE.html FILE2.html FILE3.HTML FILE4.html...
+      java -jar ~/vnu.jar FILE.html FILE2.html FILE3.HTML FILE4.html...
 
 To validate all HTML documents in a particular directory:
 
-      java -jar vnu.jar some-directory-name/
+      java -jar ~/vnu.jar some-directory-name/
 
 To validate a Web document:
 
-      java -jar vnu.jar http://example.com/foo
+      java -jar ~/vnu.jar http://example.com/foo
 
 ### Command-line options
 
@@ -41,7 +44,7 @@ executable provides the following options:
 
     default: [unset; the XML parser will attempt to load external entities]
 
-#### --format format
+#### --format _format_
 
     Specifies the output format for validation results.
 
@@ -61,7 +64,7 @@ executable provides the following options:
 
     default: [unset; *.xhtml documents are parsed by the XML parser]
 
-#### --schema URL
+#### --schema _URL_
 
     Specifies a URL for a known http://s.validator.nu/* schema to use for
     document validation.
@@ -90,7 +93,7 @@ the Web, in a Web browser, as an HTTP service—just as with
 To run the validator as an HTTP service, open a new terminal window and invoke
 `vnu.jar` like this:
 
-      java -cp vnu.jar nu.validator.servlet.Main 8888
+      java -cp ~/vnu.jar nu.validator.servlet.Main 8888
 
 Then open [http://localhost:8888][7] in a browser. (To have the validator listen
 on a different port, replace `8888` with the port number.)
@@ -110,16 +113,16 @@ locally-running instance of the HTTP service for validation. To validate
 documents in that way, do this:
 
   1. Open a new terminal window and start up the validator as an HTTP service,
-  as described in the Web-based usage section.
+  as described in the "Web-based usage" section.
 
   2. Open a second new terminal window and invoke `vnu.jar` like this:
 
-      java -cp vnu.jar nu.validator.client.HttpClient FILE.html...
+      java -cp ~/vnu.jar nu.validator.client.HttpClient FILE.html...
 
 ### HTTP client options
 
-When using the `vnu.jar` for sending documents to a locally-running instance of
-the validator HTTP service for validation, you can set Java system properties to
+When using `vnu.jar` for sending documents to a locally-running instance of the
+validator HTTP service for validation, you can set Java system properties to
 control configuration options for the validation behavior.
 
 For example, you can suppress warning-level validation messages and only show
@@ -127,7 +130,7 @@ error-level ones by setting the value of the `nu.validator.client.level` system
 property to `error`, like this:
 
        java -Dnu.validator.client.level=error\
-           -cp vnu.jar nu.validator.client.HttpClient FILE.html...
+           -cp ~/vnu.jar nu.validator.client.HttpClient FILE.html...
 
 Most of the properties listed below map to the validator.nu common input
 parameters documented at
@@ -147,7 +150,7 @@ parameters documented at
 
     default: "8888"
 
-    example: java -Dnu.validator.client.port=8080 -jar vnu.jar FILE.html
+    example: java -Dnu.validator.client.port=8080 -jar ~/vnu.jar FILE.html
 
 #### nu.validator.client.level
 
@@ -159,7 +162,7 @@ parameters documented at
 
     possible values: "error"
 
-    example: java -Dnu.validator.client.level=error -jar vnu.jar FILE.html
+    example: java -Dnu.validator.client.level=error -jar ~/vnu.jar FILE.html
 
 #### nu.validator.client.parser
 

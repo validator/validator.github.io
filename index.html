@@ -1,18 +1,22 @@
 <!doctype html><html><head><meta charset=utf-8>
-<title>How to use the validator - validator.github.io</title></head>
+<title>How to use the vnu.jar validator</title></head>
 <body>
   <h1>How to use the vnu.jar validator</h1>
 
-    <p>The <code>vnu.jar</code> validator is a packaged standalone
+    <p>The <code>vnu.jar</code> application is a portable standalone
     version of the
     <a href="http://about.validator.nu/">validator.nu</a>
-    code. The
+    validator. The
     <a href="https://github.com/validator/validator.github.io/releases"
       >latest version</a>
     is available from the
     <a href="https://github.com/validator/validator.github.io/"
       >validator area at github</a>.
     The following are instructions on how to use it to validate documents.
+
+<p class=note><b>Note:</b> In the instructions, replace
+<var>"~/vnu.jar"</var> with the actual path to the <code>vnu.jar</code>
+file on your system.
 
 <p class=links>
 Command-line: 
@@ -32,26 +36,26 @@ Web-based:
     command-line validation of HTML documents by invoking it like this:
 
 <pre>
-  java -jar vnu.jar [--html] [--entities] [--schema URL]
+  java -jar ~/vnu.jar [--help] [--html] [--entities] [--schema URL]
       [--format gnu|xml|json|text] [--verbose] [--version] FILES
 </pre>
 
     <p>To validate one or more documents from the command line:
 
 <pre>
-  java -jar vnu.jar FILE.html FILE2.html FILE3.HTML FILE4.html...
+  java -jar ~/vnu.jar FILE.html FILE2.html FILE3.HTML FILE4.html...
 </pre>
 
     <p>To validate all HTML documents in a particular directory:
 
 <pre>
-  java -jar vnu.jar some-directory-name/
+  java -jar ~/vnu.jar some-directory-name/
 </pre>
 
     <p>To validate a Web document:
 
 <pre>
-  java -jar vnu.jar http://example.com/foo
+  java -jar ~/vnu.jar http://example.com/foo
 </pre>
 
     <h3 id="command-line-options">Command-line options</h3>
@@ -121,7 +125,7 @@ Shows validator version number.
     and invoke <code>vnu.jar</code> like this:
 
 <pre>
-  java -cp vnu.jar <span class=java-class>nu.validator.servlet.Main</span> <span class=arg>8888</span>
+  java -cp ~/vnu.jar <span class=java-class>nu.validator.servlet.Main</span> <span class=arg>8888</span>
 </pre>
 
     <p>Then open
@@ -145,22 +149,22 @@ Shows validator version number.
 
       <li>Open a new terminal window and start up the validator as an HTTP
       service, as described in the
-      <a href="#web-based-usage">Web-based usage</a> section.
+      "<a href="#web-based-usage">Web-based usage</a>" section.
 
       <li>Open a second new terminal window and invoke <code>vnu.jar</code>
       like this:
 
 <pre>
-  java -cp vnu.jar <span class=java-class>nu.validator.client.HttpClient</span> FILE.html...
+  java -cp ~/vnu.jar <span class=java-class>nu.validator.client.HttpClient</span> FILE.html...
 </pre>
     </ol>
 
     <h3 id="http-client-options">HTTP client options</h3>
 
-    <p>When using the <code>vnu.jar</code> for sending documents to a
+    <p>When using <code>vnu.jar</code> for sending documents to a
     locally-running instance of the validator HTTP service for validation,
-    you can set Java system properties to control configuration options for
-    the validation behavior.
+    you can set Java system properties to control configuration options for the
+    validation behavior.
 
     <p>For example, you can suppress warning-level validation messages and only
     show error-level ones by setting the value of the
@@ -169,7 +173,7 @@ Shows validator version number.
 
 <pre>
    java <span class=java-property>-Dnu.validator.client.level=error</span>\
-       -cp vnu.jar <span class=java-class>nu.validator.client.HttpClient</span> FILE.html...
+       -cp ~/vnu.jar <span class=java-class>nu.validator.client.HttpClient</span> FILE.html...
 </pre>
 
     <p>Most of the properties listed below map to the validator.nu common input
@@ -184,16 +188,14 @@ Specifies the hostname of the validator for the client to connect to.
 default: <span class=option-value>"127.0.0.1"</span>
 </pre>
 
-
 <h4 id="nuvalidatorclientport">nu.validator.client.port</h4>
 <pre>
 Specifies the hostname of the validator for the client to connect to.
 
 default: <span class=option-value>"8888"</span>
 
-example: java -Dnu.validator.client.port=8080 -jar vnu.jar FILE.html
+example: java -Dnu.validator.client.port=8080 -jar ~/vnu.jar FILE.html
 </pre>
-
 
 <h4 id="nuvalidatorclientlevel">nu.validator.client.level</h4>
 <pre>
@@ -205,9 +207,8 @@ default: [unset]
 
 possible values: <span class=option-value>"error"</span>
 
-example: java -Dnu.validator.client.level=error -jar vnu.jar FILE.html
+example: java -Dnu.validator.client.level=error -jar ~/vnu.jar FILE.html
 </pre>
-
 
 <h4 id="nuvalidatorclientparser">nu.validator.client.parser</h4>
 <pre>
@@ -218,7 +219,6 @@ default: <span class=option-value>"html"</span>; or, for *.xhtml input files, <s
 possible values: see <a href="http://wiki.whatwg.org/wiki/Validator.nu_Common_Input_Parameters#parser">http://wiki.whatwg.org/wiki/Validator.nu_Common_Input_Parameters#parser</a>
 </pre>
 
-
 <h4 id="nuvalidatorclientcharset">nu.validator.client.charset</h4>
 <pre>
 Specifies the encoding of the input document.
@@ -226,14 +226,12 @@ Specifies the encoding of the input document.
 default: [unset]
 </pre>
 
-
 <h4 id="nuvalidatorclientcontent-type">nu.validator.client.content-type</h4>
 <pre>
 Specifies the content-type of the input document.
 
 default: <span class=option-value>"text/html"</span>; or, for *.xhtml files, <span class=option-value>"application/xhtml+xml"</span>
 </pre>
-
 
 <h4 id="nuvalidatorclientout">nu.validator.client.out</h4>
 <pre>
@@ -319,7 +317,7 @@ a:active {
   background-color: white;
   color: black;
 }
-.set {
+.set, .note {
   background-color: ivory;
   padding: 16px;
   padding-top: 4px;

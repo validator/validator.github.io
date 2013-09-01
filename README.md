@@ -17,7 +17,8 @@ You can use the `vnu.jar` validator as an executable for command-line validation
 of HTML documents by invoking it like this:
 
       java -jar ~/vnu.jar [--help] [--html] [--entities] [--schema URL]
-          [--format gnu|xml|json|text] [--verbose] [--version] FILES
+          [--format gnu|xml|json|text] [--no-stream] [--verbose] [--version]
+          FILES
 
 To validate one or more documents from the command line:
 

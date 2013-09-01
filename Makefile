@@ -10,7 +10,7 @@ all: README.md
 
 README.md: index.html
 	$(HTML2MARKDOWN) $(HTML2MARKDOWNFLAGS) $< \
-	    | $(PERL) $(PERLFLAGS) -pe 'undef $$/;s/Command-line: usage · options \| Web-based: usage · client · options\n//' \
+	    | $(PERL) $(PERLFLAGS) -pe 'undef $$/;s/Usage · Options\n//' \
 	    | $(PERL) $(PERLFLAGS) -pe 'undef $$/; s/(\s+\n)+/\n\n/g' \
 	    | $(PERL) $(PERLFLAGS) -pe 'undef $$/; s/(\n\n\n)+/\n/g' \
 	    | $(FMT) $(FMTFLAGS) \

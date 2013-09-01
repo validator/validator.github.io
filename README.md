@@ -9,8 +9,6 @@ github. The following are instructions on how to use it to validate documents.
 **Note:** In the instructions, replace _"~/vnu.jar"_ with the actual path to the
 `vnu.jar` file on your system.
 
-Usage · Options
-
 ## Usage
 
 You can use the `vnu.jar` validator as an executable for command-line validation

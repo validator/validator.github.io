@@ -35,7 +35,7 @@ To validate from standard input:
 
       java -jar ~/vnu.jar -
 
-      echo 'test...' | java -jar ~/vnu.jar -
+      echo '<!doctype html><title>test...' | java -jar ~/vnu.jar -
 
 ### Options
 

@@ -1,13 +1,10 @@
 # How to use the vnu.jar validator
 
-The `vnu.jar` application is a portable standalone version of the
-[validator.nu][1] validator. The [latest version][2] is available from the
-[validator area at github][3]. The following are instructions on how to use it
-to validate documents.
+The `vnu.jar` application is a portable standalone version of the validator.nu
+validator. The [latest version][1] is available from the validator area at
+github. The following are instructions on how to use it to validate documents.
 
-   [1]: http://about.validator.nu/
-   [2]: https://github.com/validator/validator.github.io/releases
-   [3]: https://github.com/validator/validator.github.io/
+   [1]: https://github.com/validator/validator.github.io/releases
 
 **Note:** In the instructions, replace _"~/vnu.jar"_ with the actual path to the
 `vnu.jar` file on your system.
@@ -61,9 +58,9 @@ executable provides the following options:
     possible values: "gnu", "xml", "json", "text"
 
     see also:
-    [http://wiki.whatwg.org/wiki/Validator.nu_Common_Input_Parameters#out][4]
+    [http://wiki.whatwg.org/wiki/Validator.nu_Common_Input_Parameters#out][2]
 
-   [4]: http://wiki.whatwg.org/wiki/Validator.nu_Common_Input_Parameters#out
+   [2]: http://wiki.whatwg.org/wiki/Validator.nu_Common_Input_Parameters#out
 
 #### --html
 
@@ -92,9 +89,9 @@ executable provides the following options:
 
 For details on using the `vnu.jar` validator to provide validation of HTML
 documents over the Web (in a Web browser, as an HTTP service), see [How to use
-the vnu.jar validator for Web-based validation][5].
+the vnu.jar validator for Web-based validation][3].
 
-   [5]: http://validator.github.io/web-based-usage.html
+   [3]: http://validator.github.io/web-based-usage.html
 
 For more information... sources bugz etc.
 

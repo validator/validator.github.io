@@ -29,7 +29,7 @@ command-line validation of HTML documents by invoking it like this:
     [--format gnu|xml|json|text] [--no-stream] [--verbose] [--version] FILES
 </pre>
 
-<p>To validate one or more documents from the command line:
+<p>To validate one or more HTML documents from the command line:
 <pre>
   java -jar ~/vnu.jar FILE.html FILE2.html FILE3.HTML FILE4.html...
 </pre>
@@ -59,7 +59,7 @@ command-line validation of HTML documents by invoking it like this:
 
 <h4 id="entities">--entities</h4>
 <pre>
-Specifies that the XML parser must not load remote/external entities (such
+Specifies that the XML parser should not load remote/external entities (such
 as DTDs) from the Internet.
 
 default: [unset; the XML parser will attempt to load external entities]
@@ -76,12 +76,26 @@ possible values: <span class=option-value>"gnu"</span>, <span class=option-value
 see also: <a href="http://wiki.whatwg.org/wiki/Validator.nu_Common_Input_Parameters#out">http://wiki.whatwg.org/wiki/Validator.nu_Common_Input_Parameters#out</a>
 </pre>
 
+<h4 id="help">--help</h4>
+<pre>
+Shows detailed usage information.
+</pre>
+
 <h4 id="html">--html</h4>
 <pre>
-Specifies that all documents must be parsed by the HTML parser as text/html
+Specifies that all documents should be parsed by the HTML parser as text/html
 (otherwise, *.xhtml documents are parsed by the XML parser).
 
 default: [unset; *.xhtml documents are parsed by the XML parser]
+</pre>
+
+<h4 id="no-stream">--no-stream</h4>
+<pre>
+Specifies that all documents parsed by the HTML parser will be parsed in
+buffered mode instead of streaming mode (causes some parse errors to be
+treated as non-fatal document errors instead of as fatal document errors).
+
+default: [unset; non-streamable parse errors cause fatal document errors]
 </pre>
 
 <h4 id="schema-url">--schema <var>URL</var></h4>
@@ -94,15 +108,15 @@ default: <span class=option-value>http://s.validator.nu/html5-all.rnc</span>
 
 <h4 id="verbose">--verbose</h4>
 <pre>
-Specifies that the validator output should be "verbose". Currently this
-just means that the names of files being validated are written to stdout.
+Specifies that the validator output should be "verbose". (Currently this
+just means that the names of files being validated are written to stdout.)
 
 default: [unset; output is not verbose]
 </pre>
 
 <h4 id="version">--version</h4>
 <pre>
-Shows validator version number.
+Shows the <code>vnu.jar</code> version number.
 </pre>
 </section>
 </div>

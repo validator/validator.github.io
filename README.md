@@ -29,13 +29,14 @@ To validate all HTML documents in a particular directory:
 
 To validate a Web document:
 
-      java -jar ~/vnu.jar http://example.com/foo
+      java -jar ~/vnu.jar _URL_ example: java -jar ~/vnu.jar
+      http://example.com/foo
 
 To validate from standard input:
 
       java -jar ~/vnu.jar -
 
-      echo '<!doctype html><title>test...' | java -jar ~/vnu.jar -
+      example: echo '<!doctype html><title>test...' | java -jar ~/vnu.jar -
 
 ### Options
 

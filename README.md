@@ -90,8 +90,8 @@ executable provides the following options:
     Shows validator version number.
 
 For details on using the `vnu.jar` validator to provide validation of HTML
-documents over the Web (in a Web browser, as an HTTP service), see [How to use
-the vnu.jar validator for Web-based validation][3].
+documents over the Web (in a Web browser, as an HTTP service), see [Using
+vnu.jar for Web-based validation][3].
 
    [3]: http://validator.github.io/web-based-usage.html
 

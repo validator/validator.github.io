@@ -11,7 +11,7 @@ github. The following are instructions on how to use it to validate documents.
 
 Usage · Options
 
-## Command-line usage
+## Usage
 
 You can use the `vnu.jar` validator as an executable for command-line validation
 of HTML documents by invoking it like this:
@@ -37,7 +37,7 @@ To validate from standard input:
 
       echo 'test...' | java -jar ~/vnu.jar -
 
-### Command-line options
+### Options
 
 When used from the command line as described in this section, the `vnu.jar`
 executable provides the following options:

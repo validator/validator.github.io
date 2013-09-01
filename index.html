@@ -20,41 +20,44 @@ file on your system.
 
 <p class=links>
 <a href="#command-line-usage">Usage</a> · 
-<a href="#command-line-options">Pptions</a>
+<a href="#command-line-options">Options</a>
 
   <div class=set>
   <section id=command-line-usage>
   <h2>Command-line usage</h2>
 
-    <p>You can use the <code>vnu.jar</code> validator as an executable for
-    command-line validation of HTML documents by invoking it like this:
-
+<p>You can use the <code>vnu.jar</code> validator as an executable for
+command-line validation of HTML documents by invoking it like this:
 <pre>
   java -jar ~/vnu.jar [--help] [--html] [--entities] [--schema URL]
       [--format gnu|xml|json|text] [--verbose] [--version] FILES
 </pre>
 
-    <p>To validate one or more documents from the command line:
-
+<p>To validate one or more documents from the command line:
 <pre>
   java -jar ~/vnu.jar FILE.html FILE2.html FILE3.HTML FILE4.html...
 </pre>
 
-    <p>To validate all HTML documents in a particular directory:
-
+<p>To validate all HTML documents in a particular directory:
 <pre>
   java -jar ~/vnu.jar some-directory-name/
 </pre>
 
-    <p>To validate a Web document:
-
+<p>To validate a Web document:
 <pre>
   java -jar ~/vnu.jar http://example.com/foo
 </pre>
 
-    <h3 id="command-line-options">Command-line options</h3>
-    <p>When used from the command line as described in this section, the
-     <code>vnu.jar</code> executable provides the following options:
+<p>To validate from standard input:
+<pre>
+  java -jar ~/vnu.jar -
+
+  echo '<!doctype html><title>test<title>...' | java -jar ~/vnu.jar -
+</pre>
+
+<h3 id="command-line-options">Command-line options</h3>
+<p>When used from the command line as described in this section, the
+<code>vnu.jar</code> executable provides the following options:
 
 <h4 id="html">--entities</h4>
 <pre>

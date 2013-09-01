@@ -101,9 +101,9 @@ executable provides the following options:
 
     Shows the vnu.jar version number.
 
-For details on using the `vnu.jar` validator to provide validation of HTML
-documents over the Web (in a Web browser, as an HTTP service), see [Using
-vnu.jar for Web-based validation][3].
+For details on using the `vnu.jar` validator to provide a service for
+browser-based validation of HTML documents over the Web, see [Using vnu.jar for
+Web-based validation][3].
 
    [3]: http://validator.github.io/web-based-usage.html
 

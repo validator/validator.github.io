@@ -8,8 +8,8 @@
     <a href="https://github.com/validator/validator.github.io/releases"
       >latest version</a>
     is available from the validator area at github.
-    The following are instructions on how to use it to do Web-based
-    (browser-based) validation of documents.
+    The following are instructions on how to use it to provide a
+    service for browser-based validation of HTML documents over the Web.
 
 <p class=note><b>Note:</b> In the instructions, replace
 <var>"~/vnu.jar"</var> with the actual path to the <code>vnu.jar</code>
@@ -24,14 +24,15 @@ file on your system.
   <section id=web-based-usage>
   <h2>Web-based usage</h2>
 
-    <p>The <code>vnu.jar</code> validator provides a way for you to
-    validate HTML documents over the Web, in a Web browser, as an HTTP
-    service—just as with
+    <p>You can use <code>vnu.jar</code> to provide a service for
+    browser-based validation of HTML documents over the Web, similar to
     <a href="http://html5.validator.nu/">http://html5.validator.nu/</a>
     and
     <a href="http://validator.w3.org/nu/">http://validator.w3.org/nu/</a>.
+    The service also includes a REST API for providing validation of HTML
+    documents to non-browser clients.
 
-    <p> To run the validator as an HTTP service, open a new terminal window
+    <p>To run the validator as a service, open a new terminal window
     and invoke <code>vnu.jar</code> like this:
 
 <pre>

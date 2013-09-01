@@ -12,7 +12,7 @@ to validate documents.
 **Note:** In the instructions, replace _"~/vnu.jar"_ with the actual path to the
 `vnu.jar` file on your system.
 
-Usage · Pptions
+Usage · Options
 
 ## Command-line usage
 
@@ -33,6 +33,12 @@ To validate all HTML documents in a particular directory:
 To validate a Web document:
 
       java -jar ~/vnu.jar http://example.com/foo
+
+To validate from standard input:
+
+      java -jar ~/vnu.jar -
+
+      echo 'test...' | java -jar ~/vnu.jar -
 
 ### Command-line options
 

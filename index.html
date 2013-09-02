@@ -25,8 +25,9 @@ file on your system.
 <p>You can use the <code>vnu.jar</code> validator as an executable for
 command-line validation of HTML documents by invoking it like this:
 <pre>
-  java -jar ~/vnu.jar [--help] [--html] [--entities] [--schema URL]
-    [--format gnu|xml|json|text] [--no-stream] [--verbose] [--version] FILES
+  java -jar ~/vnu.jar [--entities] [--errors-only] [--no-stream]
+       [--format gnu|xml|json|text] [--help] [--html]
+       [--schema URL] [--verbose] [--version] FILES
 </pre>
 
 <p>To validate one or more HTML documents from the command line:
@@ -63,6 +64,14 @@ Specifies that the XML parser should not load remote/external entities (such
 as DTDs) from the Internet.
 
 default: [unset; the XML parser will attempt to load external entities]
+</pre>
+
+<h4 id="errors-only">--errors-only</h4>
+<pre>
+Specifies that only error-level messages and non-document-error messages
+are reported.
+
+default: [unset; all message reported, including info- and warning-level]
 </pre>
 
 <h4 id="format">--format <var>format</var></h4>

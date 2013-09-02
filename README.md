@@ -111,7 +111,7 @@ For details on using the `vnu.jar` validator to provide a service for
 browser-based validation of HTML documents over the Web, see [Using vnu.jar for
 Web-based validation][3].
 
-   [3]: http://validator.github.io/web-based-usage.html
+   [3]: http://validator.github.io/service.html
 
 For more information... sources bugz etc.
 

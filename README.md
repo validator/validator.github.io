@@ -1,8 +1,9 @@
-# How to use the vnu.jar validator
+# How to use the vnu.jar markup checker
 
 The `vnu.jar` application is a portable standalone version of the validator.nu
-validator. The [latest version][1] is available from the validator area at
-github. The following are instructions on how to use it to validate documents.
+markup checker. The [latest version][1] is available from the `validator`
+project at github. The following are instructions on how to use it to check the
+markup of documents.
 
    [1]: https://github.com/validator/validator.github.io/releases
 
@@ -11,8 +12,8 @@ github. The following are instructions on how to use it to validate documents.
 
 ## Usage
 
-You can use the `vnu.jar` validator as an executable for command-line validation
-of HTML documents by invoking it like this:
+You can use the `vnu.jar` markup checker as an executable for command-line
+checking of HTML documents by invoking it like this:
 
       java -jar ~/vnu.jar [--entities] [--errors-only] [--no-stream]
            [--format gnu|xml|json|text] [--help] [--html] [--schema URL]
@@ -59,7 +60,7 @@ executable provides the following options:
 
 #### --format _format_
 
-    Specifies the output format for validation results.
+    Specifies the output format for reporting the results.
 
     default: "gnu"
 
@@ -92,14 +93,14 @@ executable provides the following options:
 #### --schema _URL_
 
     Specifies a URL for a known http://s.validator.nu/* schema to use for
-    document validation.
+    document checking.
 
     default: http://s.validator.nu/html5-all.rnc
 
 #### --verbose
 
-    Specifies that the validator output should be "verbose". (Currently this
-    just means that the names of files being validated are written to stdout.)
+    Specifies that the output should be "verbose". (Currently this just means
+    that the names of files being validated are written to stdout.)
 
     default: [unset; output is not verbose]
 
@@ -107,11 +108,9 @@ executable provides the following options:
 
     Shows the vnu.jar version number.
 
-For details on using the `vnu.jar` validator to provide a service for
-browser-based validation of HTML documents over the Web, see [Using vnu.jar for
-Web-based validation][3].
+For details on using the `vnu.jar` markup checker to provide a service for
+browser-based checking of HTML documents over the Web, see [Using vnu.jar for
+Web-based markup checking][3].
 
    [3]: http://validator.github.io/service.html
-
-For more information... sources bugz etc.
 

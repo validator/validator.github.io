@@ -1,14 +1,20 @@
 # How to use the vnu.jar markup checker
 
 The `vnu.jar` application is a portable standalone version of the validator.nu
-markup checker. The [latest version][1] is available from the `validator`
-project at github. The following are instructions on how to use it to check the
-markup of documents.
+markup checker. The [latest vnu.jar release][1] is available from the
+`validator` project at github. The following are instructions on how to use it
+to check the markup of documents.
 
    [1]: https://github.com/validator/validator.github.io/releases
 
 **Note:** In the instructions, replace _"~/vnu.jar"_ with the actual path to the
 `vnu.jar` file on your system.
+
+Alternatively, there’s also now a [Grunt plugin for HTML validation][2] that
+uses `vnu.jar` as its backend. You can install that plugin with `npm install
+grunt-html --save-dev`.
+
+   [2]: https://github.com/jzaefferer/grunt-html
 
 ## Usage
 
@@ -67,9 +73,9 @@ executable provides the following options:
     possible values: "gnu", "xml", "json", "text"
 
     see also:
-    [http://wiki.whatwg.org/wiki/Validator.nu_Common_Input_Parameters#out][2]
+    [http://wiki.whatwg.org/wiki/Validator.nu_Common_Input_Parameters#out][3]
 
-   [2]: http://wiki.whatwg.org/wiki/Validator.nu_Common_Input_Parameters#out
+   [3]: http://wiki.whatwg.org/wiki/Validator.nu_Common_Input_Parameters#out
 
 #### --help
 
@@ -110,7 +116,7 @@ executable provides the following options:
 
 For details on using the `vnu.jar` markup checker to provide a service for
 browser-based checking of HTML documents over the Web, see [Using vnu.jar for
-Web-based markup checking][3].
+Web-based markup checking][4].
 
-   [3]: http://validator.github.io/service.html
+   [4]: http://validator.github.io/service.html
 

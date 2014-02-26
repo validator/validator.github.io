@@ -31,29 +31,29 @@ with <code>npm install grunt-html --save-dev</code>.
 <p>You can use the <code>vnu.jar</code> markup checker as an executable for
 command-line checking of HTML documents by invoking it like this:
 <pre>
-  java -jar ~/vnu.jar [--entities] [--errors-only] [--no-stream]
+  java -jar ~/vnu.jar [--errors-only] [--no-stream]
        [--format gnu|xml|json|text] [--help] [--html]
-       [--schema URL] [--verbose] [--version] FILES
+       [--verbose] [--version] FILES
 </pre>
 
-<p>To validate one or more HTML documents from the command line:
+<p>To check one or more HTML documents from the command line:
 <pre>
   java -jar ~/vnu.jar FILE.html FILE2.html FILE3.HTML FILE4.html...
 </pre>
 
-<p>To validate all HTML documents in a particular directory:
+<p>To check all HTML documents in a particular directory:
 <pre>
   java -jar ~/vnu.jar some-directory-name/
 </pre>
 
-<p>To validate a Web document:
+<p>To check a Web document:
 <pre>
   java -jar ~/vnu.jar <var>URL</var>
 
   example: java -jar ~/vnu.jar http://example.com/foo
 </pre>
 
-<p>To validate from standard input:
+<p>To check standard input:
 <pre>
   java -jar ~/vnu.jar -
 
@@ -64,20 +64,12 @@ command-line checking of HTML documents by invoking it like this:
 <p>When used from the command line as described in this section, the
 <code>vnu.jar</code> executable provides the following options:
 
-<h4 id="entities">--entities</h4>
-<pre>
-Specifies that the XML parser should not load remote/external entities (such
-as DTDs) from the Internet.
-
-default: [unset; the XML parser will attempt to load external entities]
-</pre>
-
 <h4 id="errors-only">--errors-only</h4>
 <pre>
 Specifies that only error-level messages and non-document-error messages
-are reported.
+are reported (so that warnings and info messages are not reported).
 
-default: [unset; all message reported, including info- and warning-level]
+default: [unset; all message reported, including warnings & info messages]
 </pre>
 
 <h4 id="format">--format <var>format</var></h4>
@@ -98,33 +90,25 @@ Shows detailed usage information.
 
 <h4 id="html">--html</h4>
 <pre>
-Specifies that all documents should be parsed by the HTML parser as text/html
-(otherwise, *.xhtml documents are parsed by the XML parser).
+Forces all documents to be parsed by the HTML parser, as text/html
+(otherwise, *.xhtml documents are parsed using an XML parser).
 
-default: [unset; *.xhtml documents are parsed by the XML parser]
+default: [unset; *.xhtml documents are parsed using an XML parser]
 </pre>
 
 <h4 id="no-stream">--no-stream</h4>
 <pre>
-Specifies that all documents parsed by the HTML parser will be parsed in
-buffered mode instead of streaming mode (causes some parse errors to be
-treated as non-fatal document errors instead of as fatal document errors).
+Forces all documents to be be parsed in buffered mode instead of streaming
+mode (causes some parse errors to be treated as non-fatal document errors
+instead of as fatal document errors).
 
 default: [unset; non-streamable parse errors cause fatal document errors]
 </pre>
 
-<h4 id="schema-url">--schema <var>URL</var></h4>
-<pre>
-Specifies a URL for a known http://s.validator.nu/* schema to use for
-document checking.
-
-default: <span class=option-value>http://s.validator.nu/html5-all.rnc</span>
-</pre>
-
 <h4 id="verbose">--verbose</h4>
 <pre>
-Specifies that the output should be "verbose". (Currently this just means
-that the names of files being validated are written to stdout.)
+Specifies "verbose" output. (Currently this just means that the names of
+files being checked are written to stdout.)
 
 default: [unset; output is not verbose]
 </pre>

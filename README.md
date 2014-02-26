@@ -21,25 +21,25 @@ grunt-html --save-dev`.
 You can use the `vnu.jar` markup checker as an executable for command-line
 checking of HTML documents by invoking it like this:
 
-      java -jar ~/vnu.jar [--entities] [--errors-only] [--no-stream]
-           [--format gnu|xml|json|text] [--help] [--html] [--schema URL]
-           [--verbose] [--version] FILES
+      java -jar ~/vnu.jar [--errors-only] [--no-stream]
+           [--format gnu|xml|json|text] [--help] [--html] [--verbose]
+           [--version] FILES
 
-To validate one or more HTML documents from the command line:
+To check one or more HTML documents from the command line:
 
       java -jar ~/vnu.jar FILE.html FILE2.html FILE3.HTML FILE4.html...
 
-To validate all HTML documents in a particular directory:
+To check all HTML documents in a particular directory:
 
       java -jar ~/vnu.jar some-directory-name/
 
-To validate a Web document:
+To check a Web document:
 
       java -jar ~/vnu.jar _URL_
 
       example: java -jar ~/vnu.jar http://example.com/foo
 
-To validate from standard input:
+To check standard input:
 
       java -jar ~/vnu.jar -
 
@@ -50,19 +50,12 @@ To validate from standard input:
 When used from the command line as described in this section, the `vnu.jar`
 executable provides the following options:
 
-#### --entities
-
-    Specifies that the XML parser should not load remote/external entities (such
-    as DTDs) from the Internet.
-
-    default: [unset; the XML parser will attempt to load external entities]
-
 #### --errors-only
 
     Specifies that only error-level messages and non-document-error messages are
-    reported.
+    reported (so that warnings and info messages are not reported).
 
-    default: [unset; all message reported, including info- and warning-level]
+    default: [unset; all message reported, including warnings & info messages]
 
 #### --format _format_
 
@@ -83,30 +76,23 @@ executable provides the following options:
 
 #### --html
 
-    Specifies that all documents should be parsed by the HTML parser as
-    text/html (otherwise, *.xhtml documents are parsed by the XML parser).
+    Forces all documents to be parsed by the HTML parser, as text/html
+    (otherwise, *.xhtml documents are parsed using an XML parser).
 
-    default: [unset; *.xhtml documents are parsed by the XML parser]
+    default: [unset; *.xhtml documents are parsed using an XML parser]
 
 #### --no-stream
 
-    Specifies that all documents parsed by the HTML parser will be parsed in
-    buffered mode instead of streaming mode (causes some parse errors to be
-    treated as non-fatal document errors instead of as fatal document errors).
+    Forces all documents to be be parsed in buffered mode instead of streaming
+    mode (causes some parse errors to be treated as non-fatal document errors
+    instead of as fatal document errors).
 
     default: [unset; non-streamable parse errors cause fatal document errors]
 
-#### --schema _URL_
-
-    Specifies a URL for a known http://s.validator.nu/* schema to use for
-    document checking.
-
-    default: http://s.validator.nu/html5-all.rnc
-
 #### --verbose
 
-    Specifies that the output should be "verbose". (Currently this just means
-    that the names of files being validated are written to stdout.)
+    Specifies "verbose" output. (Currently this just means that the names of
+    files being checked are written to stdout.)
 
     default: [unset; output is not verbose]
 

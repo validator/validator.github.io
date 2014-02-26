@@ -1,9 +1,11 @@
 # How to use the vnu.jar markup checker
 
 The `vnu.jar` application is a portable standalone version of the validator.nu
-markup checker. The [latest vnu.jar release][1] is available from the
-`validator` project at github. The following are instructions on how to use it
-to check the markup of documents.
+markup checker.
+
+The [latest vnu.jar release][1] is available from the `validator` project at
+github. The following are instructions on how to use it to check the markup of
+documents.
 
    [1]: https://github.com/validator/validator.github.io/releases
 

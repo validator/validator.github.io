@@ -49,6 +49,17 @@ file on your system.
     that allows you to enter the URL of an HTML document and have the
     results for that document displayed in the browser.
 
+<div class=note>
+<p><b>Note:</b> If you get a <code>StackOverflowError</code>
+error when using the vnu.jar file, try adjusting the thread stack size by
+providing the <code>-Xss</code> option to java:</p>
+
+<pre>
+  java <span class="option-value">-Xss512k</span> -cp ~/vnu.jar nu.validator.servlet.Main 8888
+</pre>
+
+</div>
+
   <section id=http-client>
   <h2>HTTP client (for fast command-line checking)</h2>
 
@@ -238,6 +249,12 @@ a:active {
   margin-left: 2px;
   margin-right: 2px;
   border-radius: 6px;
+}
+.note {
+  background-color: rgb(241, 255, 240);
+}
+.note p {
+  margin-top: 8px;
 }
 code {
   background-color: #F8F8F8;

@@ -31,6 +31,11 @@ To check one or more HTML documents from the command line:
 
       java -jar ~/vnu.jar FILE.html FILE2.html FILE3.HTML FILE4.html...
 
+**Note:** If you get a `StackOverflowError` error when using the vnu.jar file,
+try adjusting the thread stack size by providing the `-Xss` option to java:
+
+      java -Xss512k -jar ~/vnu.jar FILE.html...
+
 To check all HTML documents in a particular directory:
 
       java -jar ~/vnu.jar some-directory-name/

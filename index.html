@@ -43,6 +43,17 @@ command-line checking of HTML documents by invoking it like this:
   java -jar ~/vnu.jar FILE.html FILE2.html FILE3.HTML FILE4.html...
 </pre>
 
+<div class=note>
+<p><b>Note:</b> If you get a <code>StackOverflowError</code>
+error when using the vnu.jar file, try adjusting the thread stack size by
+providing the <code>-Xss</code> option to java:</p>
+
+<pre>
+  java <span class="option-value">-Xss512k</span> -jar ~/vnu.jar FILE.html...
+</pre>
+
+</div>
+
 <p>To check all HTML documents in a particular directory:
 <pre>
   java -jar ~/vnu.jar some-directory-name/
@@ -198,6 +209,12 @@ a:active {
   margin-left: 2px;
   margin-right: 2px;
   border-radius: 6px;
+}
+.note {
+  background-color: rgb(241, 255, 240);
+}
+.note p {
+  margin-top: 8px;
 }
 code {
   background-color: #F8F8F8;

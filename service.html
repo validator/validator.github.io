@@ -1,24 +1,138 @@
 <!doctype html><html><head><meta charset=utf-8>
-<title>Using vnu.jar for Web-based markup checking</title></head>
+<title>Using vnu.jar or vnu.war for web-based markup checking</title>
+
+<style type="text/css">
+html {
+  background: #DDE5D9 url(data:image/gif;base64,R0lGODlhBAAEAIAAANra2v///yH5BAAAAAAALAAAAAAEAAQAAAIFTGB4xlcAOw==) repeat 0 0;
+  font-family: "Lucida Sans Unicode", "Lucida Sans", verdana, arial, helvetica;
+}
+body {
+  border: solid 1px #CED4CA;
+  background-color: #FFF;
+  padding: 4px 25px 4px 25px;
+  margin: 20px 20% 20px 20px;
+  line-height: 1.75;
+}
+h1 {
+  font-size: 36px;
+  font-weight: normal;
+  color: #0B5B9D;
+  vertical-align: top;
+  margin-bottom: 0px;
+}
+h2 {
+  font-size: 28px;
+  font-weight: normal;
+  color: #0B5B9D;
+  vertical-align: top;
+  margin-bottom: 0px;
+  margin-top: 24px;
+}
+h3 {
+  font-size: 22px;
+  font-weight: normal;
+  color: #0B5B9D;
+  vertical-align: top;
+  margin-bottom: 0px;
+  margin-top: 32px;
+}
+h4 {
+  font-size: 20px;
+  font-weight: normal;
+  color: #0B5B9D;
+  vertical-align: top;
+  margin-bottom: 0px;
+  margin-top: 22px;
+}
+a {
+  text-decoration: none;
+  color: #0B5B9D;
+  padding: 2px;
+}
+
+a:hover {
+  text-decoration: none;
+  background-color: #0B5B9D;
+  color: white;
+}
+a:active {
+  text-decoration: none;
+  background-color: white;
+  color: black;
+}
+.set, .note {
+  background-color: ivory;
+  padding: 16px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-right: 32px;
+  padding-left: 32px;
+  border: 1px solid #ccc;
+  margin-left: 2px;
+  margin-right: 2px;
+  border-radius: 6px;
+}
+.note {
+  background-color: rgb(241, 255, 240);
+}
+.note p {
+  margin-top: 8px;
+}
+code {
+  background-color: #F8F8F8;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  padding: 2px 6px;
+}
+pre {
+  background-color: #F8F8F8;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  padding: 10px;
+  margin-right: 15%;
+  margin-top: 6px;
+  line-height: 1.2
+}
+.java-class, .java-property, .option-value {
+  background-color: yellow;
+  padding: 2px 6px;
+}
+.arg {
+  color: green;
+}
+.links {
+  text-align: center;
+}
+</style>
+
+</head>
 <body>
-  <h1>Using vnu.jar for Web-based markup checking</h1>
+  <h1>Using vnu.jar or vnu.war for web-based markup checking</h1>
 
     <p>The <code>vnu.jar</code> application is a portable standalone
-    version of the validator.nu markup checker. The
+    version of the validator.nu markup checker.
+    It is well suited to <a href="./">command-line use</a> or as a simple,
+    <a href="#web-based-usage">stand-alone HTTP server.</a>
+    If you want to deploy the application to a servlet container
+    such as Apache Tomcat you will probably want to use the 
+    <code>vnu.war</code> package instead.
+    The
     <a href="https://github.com/validator/validator.github.io/releases"
-      >latest vnu.jar release</a>
-    is available from the <code>validator</code> project at github.
-    The following are instructions on how to use it to provide a
-    service for browser-based checking of HTML documents over the Web.
+      >latest releases of these files</a>
+    are available from the <code>validator</code> project at github.
+    The following are instructions demonstrating how to use these two
+    packages to provide a service for browser-based checking of 
+    HTML documents over the web.
 
 <p class=note><b>Note:</b> In the instructions, replace
-<var>"~/vnu.jar"</var> with the actual path to the <code>vnu.jar</code>
-file on your system.
+<var>"~/vnu.jar"</var> and <var>"~/vnu.war"</var>
+with the actual paths to those files on your system.
 
 <p class=links>
 <a href="#web-based-usage">Usage</a> · 
 <a href="#http-client">Client</a> · 
 <a href="#http-client-options">Options</a>
+</p>
 
   <div class=set>
   <section id=web-based-usage>
@@ -59,7 +173,7 @@ providing the <code>-Xss</code> option to java:</p>
 </pre>
 
 </div>
-
+    </section>
   <section id=http-client>
   <h2>HTTP client (for fast command-line checking)</h2>
 
@@ -178,107 +292,3 @@ possible values: "yes" or "no"
 </div>
 
 <!-- TODO: For more information... sources bugz etc. -->
-
-<style type="text/css">
-html {
-  background: #DDE5D9 url(data:image/gif;base64,R0lGODlhBAAEAIAAANra2v///yH5BAAAAAAALAAAAAAEAAQAAAIFTGB4xlcAOw==) repeat 0 0;
-  font-family: "Lucida Sans Unicode", "Lucida Sans", verdana, arial, helvetica;
-}
-body {
-  border: solid 1px #CED4CA;
-  background-color: #FFF;
-  padding: 4px 25px 4px 25px;
-  margin: 20px 20% 20px 20px;
-  line-height: 1.75;
-}
-h1 {
-  font-size: 36px;
-  font-weight: normal;
-  color: #0B5B9D;
-  vertical-align: top;
-  margin-bottom: 0px;
-}
-h2 {
-  font-size: 28px;
-  font-weight: normal;
-  color: #0B5B9D;
-  vertical-align: top;
-  margin-bottom: 0px;
-  margin-top: 24px;
-}
-h3 {
-  font-size: 22px;
-  font-weight: normal;
-  color: #0B5B9D;
-  vertical-align: top;
-  margin-bottom: 0px;
-  margin-top: 32px;
-}
-h4 {
-  font-size: 20px;
-  font-weight: normal;
-  color: #0B5B9D;
-  vertical-align: top;
-  margin-bottom: 0px;
-  margin-top: 22px;
-}
-a {
-  text-decoration: none;
-  color: #0B5B9D;
-  padding: 2px;
-}
-
-a:hover {
-  text-decoration: none;
-  background-color: #0B5B9D;
-  color: white;
-}
-a:active {
-  text-decoration: none;
-  background-color: white;
-  color: black;
-}
-.set, .note {
-  background-color: ivory;
-  padding: 16px;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  padding-right: 32px;
-  padding-left: 32px;
-  border: 1px solid #ccc;
-  margin-left: 2px;
-  margin-right: 2px;
-  border-radius: 6px;
-}
-.note {
-  background-color: rgb(241, 255, 240);
-}
-.note p {
-  margin-top: 8px;
-}
-code {
-  background-color: #F8F8F8;
-  border: 1px solid #ccc;
-  border-radius: 3px;
-  padding: 2px 6px;
-}
-pre {
-  background-color: #F8F8F8;
-  border: 1px solid #ccc;
-  border-radius: 3px;
-  padding: 10px;
-  margin-right: 15%;
-  margin-top: 6px;
-  line-height: 1.2
-}
-.java-class, .java-property, .option-value {
-  background-color: yellow;
-  padding: 2px 6px;
-}
-.arg {
-  color: green;
-}
-.links {
-  text-align: center;
-}
-</style>

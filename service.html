@@ -89,7 +89,7 @@ pre {
   border: 1px solid #ccc;
   border-radius: 3px;
   padding: 10px;
-  margin-right: 15%;
+  margin-right: 15%; /* This seems high -- consider reducing? */
   margin-top: 6px;
   line-height: 1.2
 }
@@ -129,24 +129,30 @@ pre {
 with the actual paths to those files on your system.
 
 <p class=links>
-<a href="#web-based-usage">Usage</a> · 
-<a href="#http-client">Client</a> · 
+<!--<a href="#web-based-usage">Usage</a> · -->
+<a href="#stand-alone">Stand-Alone</a> ·
+<a href="#servlet">Servlet</a> ·
+<a href="#http-client">Client</a> ·
 <a href="#http-client-options">Options</a>
-</p>
 
   <div class=set>
   <section id=web-based-usage>
   <h2>Web-based usage</h2>
 
-    <p>You can use <code>vnu.jar</code> to provide a service for
-    browser-based checking of HTML documents over the Web, similar to
+    <p>You can use <code>vnu.jar</code> or <code>vnu.war</code> to provide a service for
+    browser-based checking of HTML documents over the web, similar to
     <a href="http://html5.validator.nu/">http://html5.validator.nu/</a>
     and
     <a href="http://validator.w3.org/nu/">http://validator.w3.org/nu/</a>.
     The service also includes a REST API for providing checking of HTML
-    documents to non-browser clients.
+    documents for other clients, not just web browsers.
 
-    <p>To run the markup checker as a service, open a new terminal window
+  </section>
+  <section id=stand-alone>
+    <h2>Stand-alone web server</h2>
+    <p>To run the markup checker as a stand-alone service
+    (using built-in Jetty server),
+    open a new terminal window
     and invoke <code>vnu.jar</code> like this:
 
 <pre>
@@ -166,14 +172,59 @@ with the actual paths to those files on your system.
 <div class=note>
 <p><b>Note:</b> If you get a <code>StackOverflowError</code>
 error when using the vnu.jar file, try adjusting the thread stack size by
-providing the <code>-Xss</code> option to java:</p>
+providing the <code>-Xss</code> option to java:
 
 <pre>
   java <span class="option-value">-Xss512k</span> -cp ~/vnu.jar nu.validator.servlet.Main 8888
 </pre>
 
 </div>
-    </section>
+  </section>
+  <section id=servlet>   
+    <h2>Deployment to servlet container</h2>
+    <p>To run the markup checker inside of an existing servlet container
+    such as Apache Tomcat you will need to deploy the <code>vnu.war</code>
+    file to that server following its documentation.
+    For example, on Apache Tomcat you could do this using
+    the <a href="http://tomcat.apache.org/tomcat-8.0-doc/manager-howto.html">Manager</a> application or simply by copying the file to
+    the <code>webapps</code> directory
+    (since that is the default <code>appBase</code> setting).
+	Typically you would see a message similar to the following
+	in the <code>catalina.out</code> log file.
+<pre>
+May 7, 2014 4:42:04 PM org.apache.catalina.startup.HostConfig deployWAR
+INFO: Deploying web application archive /var/lib/tomcat7/webapps/vnu.war
+</pre>
+
+    Assuming your servlet container is configured to receive HTTP
+    requests sent to <code>localhost</code> on port <code>80</code>
+    and the context root of this application is <code>vnu</code>
+    (often the default behavior is to use the WAR file's filename
+    as the context root unless one is explicitly specified)
+    you should be able to access the application by connecting
+    to <a href="http://localhost/vnu/">http://localhost/vnu/</a>.
+
+<div class=note>
+	<b>Note:</b> You may want to customize the <code>/WEB-INF/web.xml</code>
+	file inside the WAR file (you can use any ZIP handing program)
+	to modify the servlet filter configuration.
+	For example, if you wanted to disable gzip decompression you
+	could comment-out that filter like this:
+	
+	<pre>
+&lt;!--
+  &lt;filter>
+      &lt;filter-name>gzip-filter&lt;/filter-name>
+      &lt;filter-class>org.mortbay.servlet.GzipFilter&lt;/filter-class>
+  &lt;/filter>
+  &lt;filter-mapping>
+      &lt;filter-name>gzip-filter&lt;/filter-name>
+      &lt;url-pattern>*&lt;/url-pattern>
+  &lt;/filter-mapping>
+--></pre>
+</div>
+
+  </section>
   <section id=http-client>
   <h2>HTTP client (for fast command-line checking)</h2>
 
@@ -205,7 +256,7 @@ providing the <code>-Xss</code> option to java:</p>
     <p>For example, you can suppress warning-level messages and only
     show error-level ones by setting the value of the
     <code>nu.validator.client.level</code> system property to
-    <code>error</code>, like this:</p>
+    <code>error</code>, like this:
 
 <pre>
    java <span class=java-property>-Dnu.validator.client.level=error</span>\

@@ -1,5 +1,5 @@
 <!doctype html><html><head><meta charset=utf-8>
-<title>Using vnu.jar or vnu.war for web-based markup checking</title>
+<title>Web-based markup checking with vnu.jar & vnu.war</title>
 
 <style type="text/css">
 html {
@@ -107,12 +107,11 @@ pre {
 
 </head>
 <body>
-  <h1>Using vnu.jar or vnu.war for web-based markup checking</h1>
+  <h1>Web-based checking with vnu.war and vnu.jar</h1>
 
-    <p>The <code>vnu.jar</code> application is a portable standalone
-    version of the validator.nu markup checker.
-    It is well suited to <a href="./">command-line use</a> or as a simple,
-    <a href="#web-based-usage">stand-alone HTTP server.</a>
+    <p>Along with <a href="./">command-line use</a>,
+    the <code>vnu.jar</code> package is suited to use
+    as a simple <a href="#web-based-usage">stand-alone HTTP server.</a>
     If you want to deploy the application to a servlet container
     such as Apache Tomcat you will probably want to use the 
     <code>vnu.war</code> package instead.
@@ -196,7 +195,7 @@ May 7, 2014 4:42:04 PM org.apache.catalina.startup.HostConfig deployWAR
 INFO: Deploying web application archive /var/lib/tomcat7/webapps/vnu.war
 </pre>
 
-    Assuming your servlet container is configured to receive HTTP
+    <p>Assuming your servlet container is configured to receive HTTP
     requests sent to <code>localhost</code> on port <code>80</code>
     and the context root of this application is <code>vnu</code>
     (often the default behavior is to use the WAR file's filename
@@ -205,6 +204,7 @@ INFO: Deploying web application archive /var/lib/tomcat7/webapps/vnu.war
     to <a href="http://localhost/vnu/">http://localhost/vnu/</a>.
 
 <div class=note>
+<p>
 	<b>Note:</b> You may want to customize the <code>/WEB-INF/web.xml</code>
 	file inside the WAR file (you can use any ZIP handing program)
 	to modify the servlet filter configuration.

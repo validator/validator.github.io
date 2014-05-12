@@ -107,9 +107,9 @@ executable provides the following options:
 
     Shows the vnu.jar version number.
 
-For details on using the `vnu.jar` markup checker to provide a service for
-browser-based checking of HTML documents over the Web, see [Using vnu.jar for
-Web-based markup checking][4].
+For details on how to provide browser-based checking of documents over the Web
+using either the `vnu.jar` package or an alternative `vnu.war` package that’s
+also available, see [Web-based checking with vnu.war or vnu.jar][4].
 
    [4]: http://validator.github.io/service.html
 

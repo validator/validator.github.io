@@ -10,13 +10,12 @@ facet of the [W3C Validator][4].
    [4]: http://validator.w3.org
 
 The Nu Markup Checker source code is available from [a set of repositories
-hosted at github][5].
+hosted at github][5], as is `vnu.jar`, a portable standalone version.
 
    [5]: https://github.com/validator/
 
-The easiest way to run your own copy of the Nu Markup Checker is to [get the
-latest vnu.jar release][6]. The `vnu.jar` file provides a portable standalone
-version of the Nu Markup Checker.
+The easiest way to do things with the Nu Markup Checker on your own is to [get
+the latest vnu.jar release][6].
 
    [6]: https://github.com/validator/validator.github.io/releases/latest
 

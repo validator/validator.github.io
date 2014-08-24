@@ -4,8 +4,10 @@ The Nu Markup Checker is the backend behind [http://validator.nu][1],
 [http://html5.validator.nu][2], [http://validator.w3.org/nu/][3], and the HTML5
 facet of the [W3C Validator][4].
 
-   [1]: http://validator.nu [2]: http://html5.validator.nu
-   [3]: http://validator.w3.org/nu/ [4]: http://validator.w3.org
+   [1]: http://validator.nu
+   [2]: http://html5.validator.nu
+   [3]: http://validator.w3.org/nu/
+   [4]: http://validator.w3.org
 
 The source code for the Nu Markup Checker is contained in [a number of
 repositories hosted at github][5].

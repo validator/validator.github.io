@@ -9,17 +9,19 @@ facet of the [W3C Validator][4].
    [3]: http://validator.w3.org/nu/
    [4]: http://validator.w3.org
 
-The Nu Markup Checker is also available as a portable standalone jar file called
-`vnu.jar`.
-
 The Nu Markup Checker source code is available from [a set of repositories
-hosted at github][5], as is the [latest vnu.jar release][6].
+hosted at github][5].
 
    [5]: https://github.com/validator/
+
+The easiest way to run your own copy of the Nu Markup Checker is to [get the
+latest vnu.jar release][6]. The `vnu.jar` file provides a portable standalone
+version of the Nu Markup Checker.
+
    [6]: https://github.com/validator/validator.github.io/releases/latest
 
-In in the **Usage** section below are instructions on how to use `vnu.jar` to
-check the markup of documents.
+In the **Usage** section below are instructions on how to use `vnu.jar` to check
+the markup of documents.
 
 **Note:** In the instructions, replace _"~/vnu.jar"_ with the actual path to the
 `vnu.jar` file on your system.

@@ -15,7 +15,9 @@ repositories hosted at github][5].
    [5]: https://github.com/validator/
 
 The Nu Markup Checker is also available as a portable standalone jar file called
-`vnu.jar`. The [latest vnu.jar release][6] is available for download.
+`vnu.jar`.
+
+The [latest vnu.jar release][6] is available for download.
 
    [6]: https://github.com/validator/validator.github.io/releases/latest
 

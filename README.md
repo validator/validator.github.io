@@ -1,22 +1,33 @@
-# The vnu.jar markup checker
+# The Nu Markup Checker
 
-The `vnu.jar` application is a portable standalone version of the validator.nu
-markup checker.
+The Nu Markup Checker is the backend behind [http://validator.nu][1],
+[http://html5.validator.nu][2], [http://validator.w3.org/nu/][3], and the HTML5
+facet of the [W3C Validator][4].
 
-The [latest vnu.jar release][1] is available from the `validator` project at
-github. In in the **Usage** section below are instructions on how to use it to
+   [1]: http://validator.nu [2]: http://html5.validator.nu
+   [3]: http://validator.w3.org/nu/ [4]: http://validator.w3.org
+
+The source code for the Nu Markup Checker is contained in [a number of
+repositories hosted at github][5].
+
+   [5]: https://github.com/validator/
+
+The Nu Markup Checker is also available as a portable standalone jar file called
+`vnu.jar`. The [latest vnu.jar release][6] is available for download.
+
+   [6]: https://github.com/validator/validator.github.io/releases/latest
+
+In in the **Usage** section below are instructions on how to use `vnu.jar` to
 check the markup of documents.
-
-   [1]: https://github.com/validator/validator.github.io/releases
 
 **Note:** In the instructions, replace _"~/vnu.jar"_ with the actual path to the
 `vnu.jar` file on your system.
 
-Alternatively, there’s also now a [Grunt plugin for HTML validation][2] that
+Alternatively, there’s also now a [Grunt plugin for HTML validation][7] that
 uses `vnu.jar` as its backend. You can install that plugin with `npm install
 grunt-html --save-dev`.
 
-   [2]: https://github.com/jzaefferer/grunt-html
+   [7]: https://github.com/jzaefferer/grunt-html
 
 ## Usage
 
@@ -73,9 +84,9 @@ executable provides the following options:
     possible values: "gnu", "xml", "json", "text"
 
     see also:
-    [http://wiki.whatwg.org/wiki/Validator.nu_Common_Input_Parameters#out][3]
+    [http://wiki.whatwg.org/wiki/Validator.nu_Common_Input_Parameters#out][8]
 
-   [3]: http://wiki.whatwg.org/wiki/Validator.nu_Common_Input_Parameters#out
+   [8]: http://wiki.whatwg.org/wiki/Validator.nu_Common_Input_Parameters#out
 
 #### --help
 
@@ -109,7 +120,7 @@ executable provides the following options:
 
 For details on how to provide browser-based checking of documents over the Web
 using either the `vnu.jar` package or an alternative `vnu.war` package that’s
-also available, see [Web-based checking with vnu.war or vnu.jar][4].
+also available, see [Web-based checking with vnu.war or vnu.jar][9].
 
-   [4]: http://validator.github.io/service.html
+   [9]: http://validator.github.io/service.html
 

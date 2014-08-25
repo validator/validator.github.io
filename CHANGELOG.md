@@ -4,8 +4,8 @@
   - made refinements to outline handling
   - added experimental warnings for some heading/outline issues
   - improved checking for `meta@name` and `link@rel` values
-  - CLI now exits with 1 if any errors are found
-  - CLI no longer says "XHTML element" in error messages
+  - CLI now exits with `1` if any errors are found
+  - CLI no longer says `XHTML element` in error messages
   - switched to galimatias for URL checking
   - updated to latest ICU4J
   - release now includes WAR file

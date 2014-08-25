@@ -1,9 +1,9 @@
 # 25 August 2014
-  - added support for the <picture> element
+  - added support for the `<picture>` element
   - improved ARIA support for various table elements
   - made refinements to outline handling
   - added experimental warnings for some heading/outline issues
-  - improved checking for meta@name and lin@rel values
+  - improved checking for `meta@name` and `link@rel` values
   - CLI now exits with 1 if any errors are found
   - CLI no longer says "XHTML element" in error messages
   - switched to galimatias for URL checking
@@ -11,4 +11,4 @@
   - release now includes WAR file
 
 # 02 February 2014
-  - initial vnu.jar release
+  - initial `vnu.jar` release

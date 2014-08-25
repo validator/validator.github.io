@@ -1,4 +1,4 @@
-25 August 2014
+# 25 August 2014
   - added support for the <picture> element
   - improved ARIA support for various table elements
   - made refinements to outline handling
@@ -10,5 +10,5 @@
   - updated to latest ICU4J
   - release now includes WAR file
 
-02 February 2014
+# 02 February 2014
   - initial vnu.jar release

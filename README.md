@@ -7,8 +7,8 @@ repositories hosted at github][5], as is `vnu.jar`, a portable standalone
 version for either batch validation of HTML documents directly from the command
 line and from other scripts/apps or as a simple stand-alone HTTP server that
 provides a service for browser-based checking of HTML documents over the
-Web—similar to [http://html5.validator.nu/][2],
-[http://validator.w3.org/nu/][3], etc.
+Web—similar to [http://html5.validator.nu][2], [http://validator.w3.org/nu/][3],
+etc.
 
    [1]: http://validator.nu
    [2]: http://html5.validator.nu

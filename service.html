@@ -150,7 +150,7 @@ with the actual paths to those files on your system.
   <section id=stand-alone>
     <h2>Stand-alone web server</h2>
     <p>To run the markup checker as a stand-alone service
-    (using built-in Jetty server),
+    (using a built-in Jetty server),
     open a new terminal window
     and invoke <code>vnu.jar</code> like this:
 
@@ -206,10 +206,10 @@ INFO: Deploying web application archive /var/lib/tomcat7/webapps/vnu.war
 <div class=note>
 <p>
 	<b>Note:</b> You may want to customize the <code>/WEB-INF/web.xml</code>
-	file inside the WAR file (you can use any ZIP handing program)
+	file inside the WAR file (you can use any ZIP-handling program)
 	to modify the servlet filter configuration.
 	For example, if you wanted to disable gzip decompression you
-	could comment-out that filter like this:
+	could comment out that filter like this:
 	
 	<pre>
 &lt;!--

@@ -1,25 +1,23 @@
 # The Nu Markup Checker
 
-The Nu Markup Checker is the backend behind [http://validator.nu][1],
-[http://html5.validator.nu][2], [http://validator.w3.org/nu/][3], and the HTML5
-facet of the [W3C Validator][4]. Its source code is available from [a set of
-repositories hosted at github][5], as is `vnu.jar`, a portable standalone
-version for either batch validation of HTML documents directly from the command
-line and from other scripts/apps or as a simple stand-alone HTTP server that
-provides a service for browser-based checking of HTML documents over the
-Web—similar to [http://html5.validator.nu][2], [http://validator.w3.org/nu/][3],
-etc.
+The Nu Markup Checker is the backend behind [http://html5.validator.nu][1],
+[http://validator.w3.org/nu/][2], and the HTML5 facet of the [W3C Validator][3].
+Its source code is available from [a set of repositories hosted at github][4],
+as is `vnu.jar`, a portable standalone version for either batch validation of
+HTML documents directly from the command line and from other scripts/apps or as
+a simple stand-alone HTTP server that provides a service for browser-based
+checking of HTML documents over the Web—similar to
+[http://validator.w3.org/nu/][2], etc.
 
-   [1]: http://validator.nu
-   [2]: http://html5.validator.nu
-   [3]: http://validator.w3.org/nu/
-   [4]: http://validator.w3.org
-   [5]: https://github.com/validator/
+   [1]: http://html5.validator.nu
+   [2]: http://validator.w3.org/nu/
+   [3]: http://validator.w3.org
+   [4]: https://github.com/validator/
 
 The easiest way to do things with the Nu Markup Checker on your own is to [get
-the latest vnu.jar release][6].
+the latest vnu.jar release][5].
 
-   [6]: https://github.com/validator/validator.github.io/releases/latest
+   [5]: https://github.com/validator/validator.github.io/releases/latest
 
 In the **Usage** section below are instructions on how to use `vnu.jar` to check
 the markup of documents.
@@ -27,11 +25,11 @@ the markup of documents.
 **Note:** In the instructions, replace _"~/vnu.jar"_ with the actual path to the
 `vnu.jar` file on your system.
 
-Alternatively, there’s also now a [Grunt plugin for HTML validation][7] that
+Alternatively, there’s also now a [Grunt plugin for HTML validation][6] that
 uses `vnu.jar` as its backend. You can install that plugin with `npm install
 grunt-html --save-dev`.
 
-   [7]: https://github.com/jzaefferer/grunt-html
+   [6]: https://github.com/jzaefferer/grunt-html
 
 ## Usage
 
@@ -88,9 +86,9 @@ executable provides the following options:
     possible values: "gnu", "xml", "json", "text"
 
     see also:
-    [http://wiki.whatwg.org/wiki/Validator.nu_Common_Input_Parameters#out][8]
+    [http://wiki.whatwg.org/wiki/Validator.nu_Common_Input_Parameters#out][7]
 
-   [8]: http://wiki.whatwg.org/wiki/Validator.nu_Common_Input_Parameters#out
+   [7]: http://wiki.whatwg.org/wiki/Validator.nu_Common_Input_Parameters#out
 
 #### --help
 
@@ -124,7 +122,7 @@ executable provides the following options:
 
 For details on how to provide browser-based checking of documents over the Web
 using either the `vnu.jar` package or an alternative `vnu.war` package that’s
-also available, see [Web-based checking with vnu.war or vnu.jar][9].
+also available, see [Web-based checking with vnu.war or vnu.jar][8].
 
-   [9]: http://validator.github.io/service.html
+   [8]: http://validator.github.io/service.html
 

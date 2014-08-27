@@ -1,12 +1,13 @@
 # The Nu Markup Checker
 
-The Nu Markup Checker is the backend behind [http://html5.validator.nu][1],
-[http://validator.w3.org/nu/][2], and the HTML5 facet of the [W3C Validator][3].
-Its source code is available from [a set of repositories hosted at github][4],
-as is `vnu.jar`, a portable standalone version for either batch-checking of HTML
-documents directly from the command line and from other scripts/apps, or as a
-simple standalone HTTP server that provides a service for browser-based checking
-of HTML documents over the Web—similar to [http://validator.w3.org/nu/][2], etc.
+The Nu Markup Checker forms the same code as the backend behind
+[http://html5.validator.nu][1], [http://validator.w3.org/nu/][2], and the HTML5
+facet of the legacy [W3C Validator][3]. Its source code is available from [a set
+of repositories hosted at github][4], as is `vnu.jar`, a portable standalone
+version for either batch-checking of HTML documents directly from the command
+line and from other scripts/apps, or for use as a simple standalone HTTP server
+that provides a service for browser-based checking of HTML documents over the
+Web—similar to [http://validator.w3.org/nu/][2].
 
    [1]: http://html5.validator.nu
    [2]: http://validator.w3.org/nu/

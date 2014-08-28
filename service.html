@@ -1,110 +1,6 @@
 <!doctype html><html><head><meta charset=utf-8>
-<title>Web-based checking with vnu.jar or vnu.war</title>
-
-<style type="text/css">
-html {
-  background: #DDE5D9 url(data:image/gif;base64,R0lGODlhBAAEAIAAANra2v///yH5BAAAAAAALAAAAAAEAAQAAAIFTGB4xlcAOw==) repeat 0 0;
-  font-family: "Lucida Sans Unicode", "Lucida Sans", verdana, arial, helvetica;
-}
-body {
-  border: solid 1px #CED4CA;
-  background-color: #FFF;
-  padding: 4px 25px 4px 25px;
-  margin: 20px 20% 20px 20px;
-  line-height: 1.75;
-}
-h1 {
-  font-size: 36px;
-  font-weight: normal;
-  color: #0B5B9D;
-  vertical-align: top;
-  margin-bottom: 0px;
-}
-h2 {
-  font-size: 28px;
-  font-weight: normal;
-  color: #0B5B9D;
-  vertical-align: top;
-  margin-bottom: 0px;
-  margin-top: 24px;
-}
-h3 {
-  font-size: 22px;
-  font-weight: normal;
-  color: #0B5B9D;
-  vertical-align: top;
-  margin-bottom: 0px;
-  margin-top: 32px;
-}
-h4 {
-  font-size: 20px;
-  font-weight: normal;
-  color: #0B5B9D;
-  vertical-align: top;
-  margin-bottom: 0px;
-  margin-top: 22px;
-}
-a {
-  text-decoration: none;
-  color: #0B5B9D;
-  padding: 2px;
-}
-
-a:hover {
-  text-decoration: none;
-  background-color: #0B5B9D;
-  color: white;
-}
-a:active {
-  text-decoration: none;
-  background-color: white;
-  color: black;
-}
-.set, .note {
-  background-color: ivory;
-  padding: 16px;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  padding-right: 32px;
-  padding-left: 32px;
-  border: 1px solid #ccc;
-  margin-left: 2px;
-  margin-right: 2px;
-  border-radius: 6px;
-}
-.note {
-  background-color: rgb(241, 255, 240);
-}
-.note p {
-  margin-top: 8px;
-}
-code {
-  background-color: #F8F8F8;
-  border: 1px solid #ccc;
-  border-radius: 3px;
-  padding: 2px 6px;
-}
-pre {
-  background-color: #F8F8F8;
-  border: 1px solid #ccc;
-  border-radius: 3px;
-  padding: 10px;
-  margin-right: 15%; /* This seems high -- consider reducing? */
-  margin-top: 6px;
-  line-height: 1.2
-}
-.java-class, .java-property, .option-value {
-  background-color: yellow;
-  padding: 2px 6px;
-}
-.arg {
-  color: green;
-}
-.links {
-  text-align: center;
-}
-</style>
-
+  <title>Web-based checking with vnu.jar or vnu.war</title>
+  <link href="assets/screen.css" rel="stylesheet">
 </head>
 <body>
   <h1>Web-based checking with vnu.war or vnu.jar</h1>
@@ -113,14 +9,14 @@ pre {
     the <code>vnu.jar</code> package is suited to use
     as a simple <a href="#web-based-usage">standalone HTTP server.</a>
     If you want to deploy the application to a servlet container
-    such as Apache Tomcat you will probably want to use the 
+    such as Apache Tomcat you will probably want to use the
     <code>vnu.war</code> package instead.
     The
     <a href="https://github.com/validator/validator.github.io/releases"
       >latest releases of these files</a>
     are available from the <code>validator</code> project at github.
     The following are instructions demonstrating how to use these two
-    packages to provide a service for browser-based checking of 
+    packages to provide a service for browser-based checking of
     HTML documents over the web.
 
 <p class=note><b>Note:</b> Replace
@@ -179,7 +75,7 @@ providing the <code>-Xss</code> option to java:
 
 </div>
   </section>
-  <section id=servlet>   
+  <section id=servlet>
     <h2>Deployment to servlet container</h2>
     <p>To run the markup checker inside of an existing servlet container
     such as Apache Tomcat you will need to deploy the <code>vnu.war</code>
@@ -210,7 +106,7 @@ INFO: Deploying web application archive /var/lib/tomcat7/webapps/vnu.war
 	to modify the servlet filter configuration.
 	For example, if you wanted to disable gzip decompression you
 	could comment out that filter like this:
-	
+
 	<pre>
 &lt;!--
   &lt;filter>
@@ -341,5 +237,3 @@ possible values: "yes" or "no"
 
   </section>
 </div>
-
-<!-- TODO: For more information... sources bugz etc. -->

@@ -3,4 +3,4 @@ install:
   - "unzip vnu.zip"
 
 script:
-  - "java -jar ./vnu/vnu.jar index.html service"
+  - "java -jar ./vnu/vnu.jar index.html service.html"

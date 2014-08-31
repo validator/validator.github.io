@@ -1,3 +1,8 @@
+# 01 September 2014
+  - fixed bug that broke json & xml message output
+    see https://github.com/validator/validator.github.io/issues/5
+    thanks https://github.com/cavweb20
+
 # 25 August 2014
   - added support for the `<picture>` element
   - improved ARIA support for various table elements

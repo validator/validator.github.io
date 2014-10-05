@@ -1,4 +1,4 @@
-# 05 October 2014
+# 06 October 2014
   - added per-spec reporting of bad IDs in `form` attribute
 
 # 01 September 2014

@@ -42,7 +42,7 @@ checking of HTML documents by invoking it like this:
            [--version] FILES
 
 **Note:** In these instructions, replace _"~/vnu.jar"_ with the actual path to
-the `vnu.jar` file on your system.
+the file on your system.
 
 To check one or more HTML documents from the command line:
 

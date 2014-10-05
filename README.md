@@ -15,11 +15,10 @@ Web—similar to [http://validator.w3.org/nu/][2].
    [4]: https://github.com/validator/
 
 To use the Nu Markup Checker on your own, [get the latest release][5] and see
-the **Usage** instructions below.
+the **Usage** instructions below— or alternatively, consider automating your
+HTML checking with a frontend such as:
 
    [5]: https://github.com/validator/validator.github.io/releases/latest
-
-Alternatively, consider automating your HTML checking with a frontend such as:
 
   * [Grunt plugin for HTML validation][6]
 

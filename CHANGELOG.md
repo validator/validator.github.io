@@ -1,3 +1,6 @@
+# 05 October 2014
+  - added per-spec reporting of bad IDs in `form` attribute
+
 # 01 September 2014
   - fixed bug that broke json & xml message output
     (see https://github.com/validator/validator.github.io/issues/5

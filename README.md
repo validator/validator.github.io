@@ -14,18 +14,12 @@ Web—similar to [http://validator.w3.org/nu/][2].
    [3]: http://validator.w3.org
    [4]: https://github.com/validator/
 
-The easiest way to do things with the Nu Markup Checker on your own is to [get
-the latest vnu.jar release][5].
+To use the Nu Markup Checker on your own, [get the latest release][5] and see
+the **Usage** instructions below.
 
    [5]: https://github.com/validator/validator.github.io/releases/latest
 
-In the **Usage** section below are instructions on how to use `vnu.jar` to check
-the markup of documents.
-
-**Note:** In the instructions, replace _"~/vnu.jar"_ with the actual path to the
-`vnu.jar` file on your system.
-
-Alternatively, consider automating HTML markup checking with frontend such as:
+Alternatively, consider automating your HTML checking with a frontend such as:
 
   * [Grunt plugin for HTML validation][6]
 
@@ -47,6 +41,9 @@ checking of HTML documents by invoking it like this:
       java -jar ~/vnu.jar [--errors-only] [--no-stream]
            [--format gnu|xml|json|text] [--help] [--html] [--verbose]
            [--version] FILES
+
+**Note:** In these instructions, replace _"~/vnu.jar"_ with the actual path to
+the `vnu.jar` file on your system.
 
 To check one or more HTML documents from the command line:
 

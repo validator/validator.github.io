@@ -31,10 +31,14 @@
 <var>"~/vnu.jar"</var> with the actual path to the <code>vnu.jar</code>
 file on your system.
 
-<p>Alternatively, there’s also now a
-<a href="https://github.com/jzaefferer/grunt-html">Grunt plugin for HTML validation</a>
-that uses <code>vnu.jar</code> as its backend. You can install that plugin
-with <code>npm install grunt-html --save-dev</code>.
+<p>Alternatively, consider automating your HTML markup checking using a frontend such as
+<a href="https://github.com/jzaefferer/grunt-html">Grunt plugin for HTML validation</a>,
+<a href="https://github.com/svenkreiss/html5validator">HTML5 Validator Integration for Travis CI</a>
+(to automatically check any HTML documents pushed to a particular github repo/branch),
+or
+<a href="https://github.com/cvrebert/lmvtfy/">LMVTFY: Let Me Validate That For You</a>
+(to automatically check the HTML content of JSFiddle, JSBin, Codepen, etc.
+pages posted as links in github issue-tracker comments).
 
 <p class=links>
 <a href="#usage">Usage</a> · 

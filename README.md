@@ -25,11 +25,16 @@ the markup of documents.
 **Note:** In the instructions, replace _"~/vnu.jar"_ with the actual path to the
 `vnu.jar` file on your system.
 
-Alternatively, there’s also now a [Grunt plugin for HTML validation][6] that
-uses `vnu.jar` as its backend. You can install that plugin with `npm install
-grunt-html --save-dev`.
+Alternatively, consider automating your HTML markup checking using a frontend
+such as [Grunt plugin for HTML validation][6], [HTML5 Validator Integration for
+Travis CI][7] (to automatically check any HTML documents pushed to a particular
+github repo/branch), or [LMVTFY: Let Me Validate That For You][8] (to
+automatically check the HTML content of JSFiddle, JSBin, Codepen, etc. pages
+posted as links in github issue-tracker comments).
 
    [6]: https://github.com/jzaefferer/grunt-html
+   [7]: https://github.com/svenkreiss/html5validator
+   [8]: https://github.com/cvrebert/lmvtfy/
 
 ## Usage
 
@@ -86,9 +91,9 @@ executable provides the following options:
     possible values: "gnu", "xml", "json", "text"
 
     see also:
-    [http://wiki.whatwg.org/wiki/Validator.nu_Common_Input_Parameters#out][7]
+    [http://wiki.whatwg.org/wiki/Validator.nu_Common_Input_Parameters#out][9]
 
-   [7]: http://wiki.whatwg.org/wiki/Validator.nu_Common_Input_Parameters#out
+   [9]: http://wiki.whatwg.org/wiki/Validator.nu_Common_Input_Parameters#out
 
 #### --help
 
@@ -122,7 +127,7 @@ executable provides the following options:
 
 For details on how to provide browser-based checking of documents over the Web
 using either the `vnu.jar` package or an alternative `vnu.war` package that’s
-also available, see [Web-based checking with vnu.war or vnu.jar][8].
+also available, see [Web-based checking with vnu.war or vnu.jar][10].
 
-   [8]: http://validator.github.io/service.html
+   [10]: http://validator.github.io/service.html
 

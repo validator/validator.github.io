@@ -26,7 +26,7 @@ HTML checking with a frontend such as:
   to a particular github repo/branch)
 
   * [LMVTFY: Let Me Validate That For You][8] (auto-check HTML content of
-  JSFiddle, JSBin & Codepen pages posted as links in github issue comments)
+  JSFiddle/JSBin/Codepen etc. pages posted as links in github issue comments)
 
    [6]: https://github.com/jzaefferer/grunt-html
    [7]: https://github.com/svenkreiss/html5validator

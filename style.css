@@ -56,6 +56,10 @@ a:active {
   background-color: white;
   color: black;
 }
+h1 a:hover {
+  background-color: inherit;
+  color: white;
+}
 .set, .note {
   background-color: ivory;
   padding: 16px;
@@ -88,6 +92,9 @@ pre {
   margin-right: 15%;
   margin-top: 6px;
   line-height: 1.2
+}
+pre.aligned {
+  margin-left: 40px;
 }
 .java-class, .java-property, .option-value {
   background-color: yellow;

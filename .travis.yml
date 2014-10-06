@@ -1,6 +1,7 @@
-install:
-  - "wget -O vnu.zip https://github.com/validator/validator.github.io/releases/download/20140825/vnu-20140825.jar.zip"
-  - "unzip vnu.zip"
+env:
+  - CHECKER=http://validator.w3.org/nu/
+  - FILES=$(find . -name "*.html")
+  - OUTPUT=$(for file in $FILES; do curl -s -F out=gnu -F doc=@$FILE $CHECKER; done)
 
 script:
-  - "java -jar ./vnu/vnu.jar index.html service.html"
+  - if [ -n "$output" ]; then printf "$output"; echo; exit 1; fi

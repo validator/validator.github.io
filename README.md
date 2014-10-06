@@ -131,3 +131,8 @@ executable provides the following options:
 
     Shows the vnu.jar version number.
 
+To provide browser-based checking of documents over the Web, see [Web-based
+checking with vnu.war or vnu.jar][13].
+
+   [13]: http://validator.github.io/service.html
+

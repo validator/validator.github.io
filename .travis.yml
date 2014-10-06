@@ -1,3 +1,5 @@
+language: java
+
 env:
   global:
     - CHECKER=http://validator.w3.org/nu/
@@ -5,4 +7,11 @@ env:
     - OUTPUT=$(for file in $FILES; do curl -s -F out=gnu -F doc=@$file $CHECKER; done)
 
 script:
+  - git clone https://github.com/validator/build.git build
+  - python ./build/build.py checkout
+  - python ./build/build.py dldeps test
+  - python ./build/build.py build; python ./build/build.py build
+  - python ./build/build.py test
+  - python ./build/build.py jar
+  - java -jar ./build/vnu/vnu.jar $FILES
   - if [ -n "$OUTPUT" ]; then printf "$OUTPUT"; exit 1; fi

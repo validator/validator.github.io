@@ -1,3 +1,4 @@
+language: javascript
 env:
   global:
     - CHECKER=http://validator.w3.org/nu/

@@ -1,9 +1,9 @@
 # The Nu Markup Checker (v.Nu) [![Build Status](http://goo.gl/b6xEQs)](http://goo.gl/ehNisw)
 
 The Nu Markup Checker (v.Nu) is a name for the backend of
-[http://html5.validator.nu][1], [http://validator.w3.org/nu/][2], and the HTML5
-facet of the legacy [W3C Validator][3]. Its source code is available from [a set
-of github repositories][4]. The checker is released as two separate packages:
+[html5.validator.nu][1], [validator.w3.org/nu][2], and the HTML5 facet of the
+legacy [W3C Validator][3]. Its source code is available from [a set of github
+repositories][4]. The checker is released as two separate packages:
 
    [1]: http://html5.validator.nu
    [2]: http://validator.w3.org/nu/
@@ -11,7 +11,7 @@ of github repositories][4]. The checker is released as two separate packages:
    [4]: https://github.com/validator/
 
   * `vnu.jar` is a portable standalone version for batch-checking documents from
-  the command line and from other scripts/apps or for [deploying the checker as
+  the command line and from other scripts/apps, or for [deploying the checker as
   a self-contained service][5]
 
   * `vnu.war` is for [deploying the checker service through a servlet container
@@ -96,9 +96,9 @@ executable provides the following options:
     possible values: "gnu", "xml", "json", "text"
 
     see also:
-    [http://wiki.whatwg.org/wiki/Validator.nu_Common_Input_Parameters#out][11]
+    [wiki.whatwg.org/wiki/Validator.nu_Common_Input_Parameters#out][11]
 
-   [11]: http://wiki.whatwg.org/wiki/Validator.nu_Common_Input_Parameters#out
+   [11]: https://wiki.whatwg.org/wiki/Validator.nu_Common_Input_Parameters#out
 
 #### --help
 

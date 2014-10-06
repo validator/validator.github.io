@@ -2,7 +2,7 @@ env:
   global:
     - CHECKER=http://validator.w3.org/nu/
     - FILES=$(find . -name "*.html")
-    - OUTPUT=$(for file in $FILES; do curl -s -F out=gnu -F doc=@$FILE $CHECKER; done)
+    - OUTPUT=$(for file in $FILES; do curl -s -F out=gnu -F doc=@$file $CHECKER; done)
 
 script:
   - if [ -n "$OUTPUT" ]; then printf "$OUTPUT"; echo; exit 1; fi

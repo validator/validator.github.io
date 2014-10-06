@@ -1,4 +1,4 @@
-language: javascript
+language: node_js
 env:
   global:
     - CHECKER=http://validator.w3.org/nu/

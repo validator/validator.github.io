@@ -4,4 +4,4 @@ env:
   - OUTPUT=$(for file in $FILES; do curl -s -F out=gnu -F doc=@$FILE $CHECKER; done)
 
 script:
-  - if [ -n "$output" ]; then printf "$output"; echo; exit 1; fi
+  - if [ -n "$OUTPUT" ]; then printf "$OUTPUT"; echo; exit 1; fi

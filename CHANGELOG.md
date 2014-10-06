@@ -1,5 +1,7 @@
 # 06 October 2014
-  - added per-spec reporting of bad IDs in `form` attribute
+  - brought reporting of bad IDs in `form` attr into compliance with spec
+    (see https://github.com/validator/validator.github.io/issues/8
+    and thanks again to https://github.com/cavweb20)
 
 # 01 September 2014
   - fixed bug that broke json & xml message output

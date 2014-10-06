@@ -4,18 +4,34 @@
 <body>
   <h1>Web-based checking with vnu.war or vnu.jar</h1>
 
-    <p>Along with <a href="./">command-line use</a>,
-    the <code>vnu.jar</code> package is suited to use
-    as a simple <a href="#web-based-usage">standalone HTTP server.</a>
-    If you want to deploy the application to a servlet container
-    such as Apache Tomcat you will probably want to use the
-    <code>vnu.war</code> package instead.
+    <p>The Nu Markup Checker— along with being usable as
+    <a href="http://validator.github.io/#usage">a standalone command-line client</a>—
+    can be run as an HTTP service, similar to
+    <a href="http://html5.validator.nu/">http://html5.validator.nu/</a>
+    and
+    <a href="http://validator.w3.org/nu/">http://validator.w3.org/nu/</a>,
+    for browser-based checking of HTML documents over
+    the Web.
+    To that end, the checker is released as two separate packages:
+    <ul>
+    <li><code>vnu.jar</code> for
+    <a href="#standalone">deploying the checker as a simple standalone service</a>
+    <li><code>vnu.war</code> for
+    <a href="#servlet">deploying the checker to a servlet container such as Tomcat</a>
+    </ul>
+    <p>
+    Both deployments expose a REST API that enables checking of HTML
+    documents from other clients, not just web browsers. And the
+    <code>vnu.jar</code> package also includes
+    <a href="#http-client">a simple HTTP client</a> that enables you to
+    either send documents to a locally-running instance of the checker HTTP
+    service— for fast command-line checking— or to any remote instance of the
+    checker HTTP service running anywhere on the Web.
+    <p>
     The
-    <a href="https://github.com/validator/validator.github.io/releases/latest" >latest releases of these files</a>
+    <a href="https://github.com/validator/validator.github.io/releases/latest" >latest releases of the vnu.jar and vnu.war packages</a>
     are available from the <code>validator</code> project at github.
-    The following are instructions demonstrating how to use these two
-    packages to provide a service for browser-based checking of
-    HTML documents over the web.
+    The following are detailed instructions on using them.
 
 <p class=note><b>Note:</b> Replace
 <var>"~/vnu.jar"</var> or <var>"~/vnu.war"</var> below
@@ -28,24 +44,11 @@ with the actual paths to those files on your system.
 <a href="#http-client-options">Options</a>
 
   <div class=set>
-  <section id=web-based-usage>
-  <h2>Web-based usage</h2>
-
-    <p>You can use <code>vnu.jar</code> or <code>vnu.war</code> to provide a service for
-    browser-based checking of HTML documents over the web, similar to
-    <a href="http://html5.validator.nu/">http://html5.validator.nu/</a>
-    and
-    <a href="http://validator.w3.org/nu/">http://validator.w3.org/nu/</a>.
-    The service also includes a REST API for providing checking of HTML
-    documents for other clients, not just web browsers.
-
-  </section>
   <section id=standalone>
     <h2>Standalone web server</h2>
-    <p>To run the markup checker as a standalone service
-    (using a built-in Jetty server),
-    open a new terminal window
-    and invoke <code>vnu.jar</code> like this:
+    <p>To run the markup checker as a standalone service (using a built-in
+    Jetty server), open a new terminal window and invoke <code>vnu.jar</code>
+    like this:
 
 <pre>
   java -cp ~/vnu.jar <span class=java-class>nu.validator.servlet.Main</span> <span class=arg>8888</span>
@@ -121,39 +124,50 @@ INFO: Deploying web application archive /var/lib/tomcat7/webapps/vnu.war
   <section id=http-client>
   <h2>HTTP client (for fast command-line checking)</h2>
 
-    <p>You can also use <code>vnu.jar</code> from the command line to send
-    HTML documents to a locally-running instance of the HTTP service for
-    checking. To check documents in that way, do this:
-
+    <p>You can also use <code>vnu.jar</code> from the command line to
+    either send documents to a locally-running instance of the checker HTTP
+    service— for fast command-line checking— or to a remote instance
+    anywhere on the Web.
+    <p>
+    To check documents locally, do this:
     <ol>
-
-      <li>Open a new terminal window and start up the markup checker as an HTTP
-      service, as described in the
-      "<a href="#web-based-usage">Web-based usage</a>" section.
-
-      <li>Open a second new terminal window and invoke <code>vnu.jar</code>
-      like this:
+      <li>Start up the checker as a local HTTP service, as described in the
+      <a href="#standalone">Standalone web server</a>
+      section.
+      <li>Open a new terminal window and invoke <code>vnu.jar</code> like this:
 
 <pre>
   java -cp ~/vnu.jar <span class=java-class>nu.validator.client.HttpClient</span> FILE.html...
 </pre>
-    </ol>
+</ol>
+     To send documents to an instance of the checker on the Web, such as
+     <a href="http://html5.validator.nu/">http://html5.validator.nu/</a>,
+     use the
+     <a href="#nuvalidatorclienthost">nu.validator.client.host</a>
+     and
+     <a href="#nuvalidatorclientport">nu.validator.client.port</a>
+     options, like this:
+<pre class=aligned>
+  java <span class=java-property>-Dnu.validator.client.host=html5.validator.nu</span> <span class=java-property>-Dnu.validator.client.port=80</span> \
+     -cp ~/vnu.jar nu.validator.client.HttpClient FILE.html...
+</pre>
+
+    <p>Other options are documented below.
 
     <h3 id="http-client-options">HTTP client options</h3>
 
-    <p>When using <code>vnu.jar</code> for sending documents to a
-    locally-running instance of the checker HTTP service for checking,
-    you can set Java system properties to control configuration options for the
-    checker behavior.
+    <p>When using <code>vnu.jar</code> for sending documents to an instance
+    of the checker HTTP service for checking, you can set Java system
+    properties to control configuration options for the checker behavior.
 
     <p>For example, you can suppress warning-level messages and only
     show error-level ones by setting the value of the
     <code>nu.validator.client.level</code> system property to
     <code>error</code>, like this:
 
-<pre>
+<pre class=aligned>
    java <span class=java-property>-Dnu.validator.client.level=error</span>\
-       -cp ~/vnu.jar <span class=java-class>nu.validator.client.HttpClient</span> FILE.html...
+       -cp ~/vnu.jar nu.validator.client.HttpClient FILE.html...
 </pre>
 
     <p>Most of the properties listed below map to the validator.nu common input

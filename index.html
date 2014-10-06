@@ -5,20 +5,23 @@
   <h1>The Nu Markup Checker (v.Nu)</h1>
 
     <p>
-    The Nu Markup Checker (v.Nu) is a name for the backend behind
+    The Nu Markup Checker (v.Nu) is a name for the backend of
     <a href="http://html5.validator.nu">http://html5.validator.nu</a>,
     <a href="http://validator.w3.org/nu/">http://validator.w3.org/nu/</a>,
     and the HTML5 facet of the legacy
     <a href="http://validator.w3.org">W3C Validator</a>.
 
     Its source code is available from
-    <a href="https://github.com/validator/">a set of repositories hosted at github</a>,
-    as is <code>vnu.jar</code>, a portable standalone version for either
-    batch-checking of HTML documents directly from the command line and from
-    other scripts/apps, or for use as a simple standalone HTTP server that
-    provides a service for browser-based checking of HTML documents over the
-    Web—similar to
-    <a href="http://validator.w3.org/nu/">http://validator.w3.org/nu/</a>.
+    <a href="https://github.com/validator/">a set of repositories hosted at github</a>.
+    The checker is released as two separate packages:
+    <ul>
+    <li><code>vnu.jar</code> is a portable standalone version for either
+    <a href="#usage">batch-checking of HTML documents directly from the command line</a>
+    and from other scripts/apps or for
+    <a href="http://validator.github.io/service.html#standalone">deploying the checker as a simple standalone HTTP service</a>
+    <li><code>vnu.war</code> is for
+    <a href="http://validator.github.io/service.html#servlet">deploying the checker as an HTTP service through a servlet container such as Tomcat</a>
+    </ul>
 
     <p>
     To use the Nu Markup Checker on your own,
@@ -150,8 +153,6 @@ Shows the <code>vnu.jar</code> version number.
 </section>
 </div>
 
-<p>For details on how to provide browser-based checking of documents over
-the Web using either the <code>vnu.jar</code> package or an alternative
-<code>vnu.war</code> package that’s also available, see
+<p>To provide browser-based checking of documents over the Web, see
 <a href="http://validator.github.io/service.html">Web-based checking with vnu.war or vnu.jar</a>.
 </p>

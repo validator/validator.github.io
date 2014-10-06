@@ -1,36 +1,43 @@
 # The Nu Markup Checker (v.Nu) [![Build Status](http://goo.gl/b6xEQs)](http://goo.gl/ehNisw)
 
-The Nu Markup Checker (v.Nu) is a name for the backend behind
+The Nu Markup Checker (v.Nu) is a name for the backend of
 [http://html5.validator.nu][1], [http://validator.w3.org/nu/][2], and the HTML5
 facet of the legacy [W3C Validator][3]. Its source code is available from [a set
-of repositories hosted at github][4], as is `vnu.jar`, a portable standalone
-version for either batch-checking of HTML documents directly from the command
-line and from other scripts/apps, or for use as a simple standalone HTTP server
-that provides a service for browser-based checking of HTML documents over the
-Web—similar to [http://validator.w3.org/nu/][2].
+of repositories hosted at github][4]. The checker is released as two separate
+packages:
 
    [1]: http://html5.validator.nu
    [2]: http://validator.w3.org/nu/
    [3]: http://validator.w3.org
    [4]: https://github.com/validator/
 
-To use the Nu Markup Checker on your own, [get the latest release][5] and see
+  * `vnu.jar` is a portable standalone version for either batch-checking of HTML
+  documents directly from the command line and from other scripts/apps or for
+  [deploying the checker as a simple standalone HTTP service][5]
+
+  * `vnu.war` is for [deploying the checker as an HTTP service through a servlet
+  container such as Tomcat][6]
+
+   [5]: http://validator.github.io/service.html#standalone
+   [6]: http://validator.github.io/service.html#servlet
+
+To use the Nu Markup Checker on your own, [get the latest release][7] and see
 the **Usage** instructions below— or alternatively, consider automating your
 HTML checking with a frontend such as:
 
-   [5]: https://github.com/validator/validator.github.io/releases/latest
+   [7]: https://github.com/validator/validator.github.io/releases/latest
 
-  * [Grunt plugin for HTML validation][6]
+  * [Grunt plugin for HTML validation][8]
 
-  * [HTML5 Validator Integration for Travis CI][7] (auto-check documents pushed
+  * [HTML5 Validator Integration for Travis CI][9] (auto-check documents pushed
   to a github repo)
 
-  * [LMVTFY: Let Me Validate That For You][8] (auto-check HTML of JSFiddle/JSBin
-  etc. links in github issue comments)
+  * [LMVTFY: Let Me Validate That For You][10] (auto-check HTML of
+  JSFiddle/JSBin etc. links in github issue comments)
 
-   [6]: https://github.com/jzaefferer/grunt-html
-   [7]: https://github.com/svenkreiss/html5validator
-   [8]: https://github.com/cvrebert/lmvtfy/
+   [8]: https://github.com/jzaefferer/grunt-html
+   [9]: https://github.com/svenkreiss/html5validator
+   [10]: https://github.com/cvrebert/lmvtfy/
 
 ## Usage
 
@@ -90,9 +97,9 @@ executable provides the following options:
     possible values: "gnu", "xml", "json", "text"
 
     see also:
-    [http://wiki.whatwg.org/wiki/Validator.nu_Common_Input_Parameters#out][9]
+    [http://wiki.whatwg.org/wiki/Validator.nu_Common_Input_Parameters#out][11]
 
-   [9]: http://wiki.whatwg.org/wiki/Validator.nu_Common_Input_Parameters#out
+   [11]: http://wiki.whatwg.org/wiki/Validator.nu_Common_Input_Parameters#out
 
 #### --help
 
@@ -124,9 +131,8 @@ executable provides the following options:
 
     Shows the vnu.jar version number.
 
-For details on how to provide browser-based checking of documents over the Web
-using either the `vnu.jar` package or an alternative `vnu.war` package that’s
-also available, see [Web-based checking with vnu.war or vnu.jar][10].
+To provide browser-based checking of documents over the Web, see [Web-based
+checking with vnu.war or vnu.jar][12].
 
-   [10]: http://validator.github.io/service.html
+   [12]: http://validator.github.io/service.html
 

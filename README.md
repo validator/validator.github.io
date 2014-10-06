@@ -10,9 +10,9 @@ of github repositories][4]. The checker is released as two separate packages:
    [3]: http://validator.w3.org
    [4]: https://github.com/validator/
 
-  * `vnu.jar` is a portable standalone version for either batch-checking of HTML
+  * `vnu.jar` is a portable standalone version for either batch-checking
   documents directly from the command line and from other scripts/apps or for
-  [deploying the checker as a simple self-contained service][5]
+  [deploying the checker as a self-contained service][5]
 
   * `vnu.war` is for [deploying the checker service through a servlet container
   such as Tomcat][6]

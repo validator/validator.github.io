@@ -21,7 +21,7 @@ repositories][4]. The checker is released as two separate packages:
    [6]: http://validator.github.io/service.html#servlet
 
 To use the Nu Markup Checker on your own, [get the latest release][7] and see
-the Usage section below— or alternatively, consider automating your HTML
+the **Usage** section below— or alternatively, consider automating your HTML
 checking with a frontend such as:
 
    [7]: https://github.com/validator/validator.github.io/releases/latest

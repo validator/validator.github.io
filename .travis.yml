@@ -1,0 +1,6 @@
+install:
+  - "wget -O vnu.zip https://github.com/validator/validator.github.io/releases/download/20140825/vnu-20140825.jar.zip"
+  - "unzip vnu.zip"
+
+script:
+  - "java -jar ./vnu/vnu.jar index.html service.html"
